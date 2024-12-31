@@ -9,4 +9,4 @@ Development thread: [https://forum.flightgear.org/viewtopic.php?f=4&t=40929](htt
 
 This aircraft was modified and updated in a joint effort by the following people:
 
-* Adrián Fernández (awall086): 3D model, textures, systems, flight dynamics
+* Adrián Fernández (awall86): 3D model, textures, systems, flight dynamics
