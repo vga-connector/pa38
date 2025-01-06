@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>compass.ac</path>
+
+<!--  <effect>
+        <inherits-from>Aircraft/c170b/Models/Effects/interior/c170b-interior-compartment-1</inherits-from>
+        <object-name>Compass_Case</object-name>
+        <object-name>Ring</object-name>
+        <object-name>Needle</object-name>
+    </effect> -->
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Ring</object-name>
+        <property>/instrumentation/magnetic-compass/indicated-heading-deg</property>
+        <factor>-1</factor>
+        <axis>
+            <x1-m>-0.030283</x1-m>
+            <y1-m> 0.000082</y1-m>
+            <z1-m> 0.012087</z1-m>
+            <x2-m>-0.031093</x2-m>
+            <y2-m> 0.000027  </y2-m>
+            <z2-m>-0.010901</z2-m>
+        </axis>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>Ring</object-name>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>magnetcompass</tooltip-id>
+                <label>Magnetic heading: %3d</label>
+                <property>instrumentation/magnetic-compass/indicated-heading-deg</property>
+                <mapping>heading</mapping>
+            </binding>
+        </hovered>
+    </animation>
+
+</PropertyList>

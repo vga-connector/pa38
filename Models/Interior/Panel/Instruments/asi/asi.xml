@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <name>ASI</name>
+ <path>asi.ac</path>
+
+<!-- <animation>
+  <type>material</type>
+  <object-name>Face</object-name>
+  <object-name>airspeed_needle</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>sim/model//material/instruments/factor</factor-prop>
+  </emission>
+ </animation> -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>airspeed_needle</object-name>
+		<property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+		<interpolation>
+			<entry><ind>   0</ind><dep>     0</dep></entry>
+			<entry><ind>  40</ind><dep> 25.75</dep></entry>
+			<entry><ind>  50</ind><dep> 43.05</dep></entry>
+			<entry><ind>  60</ind><dep> 65.70</dep></entry>
+			<entry><ind>  70</ind><dep> 89.23</dep></entry>
+			<entry><ind>  80</ind><dep>117.59</dep></entry>
+			<entry><ind>  90</ind><dep>146.22</dep></entry>
+			<entry><ind> 100</ind><dep>173.71</dep></entry>
+			<entry><ind> 110</ind><dep>202.21</dep></entry>
+			<entry><ind> 120</ind><dep>230.10</dep></entry>
+			<entry><ind> 130</ind><dep>258.22</dep></entry>
+			<entry><ind> 140</ind><dep>286.29</dep></entry>
+			<entry><ind> 150</ind><dep>314.59</dep></entry>
+			<entry><ind> 160</ind><dep>341.62</dep></entry>
+			<entry><ind> 190</ind><dep>342.00</dep></entry>
+		</interpolation>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>
+
+
