@@ -95,6 +95,16 @@ Started October 04 2015 by Adrian Fernández Gómez alcala_sim@yahoo.com.ar
                 <path>Previews/pa38-preview2.jpg</path>
                 <splash type="bool">true</splash>
             </preview>
+            <preview>
+				<type>interior</type>
+                <path>Previews/pa38-preview3.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+				<type>exterior</type>
+                <path>Previews/pa38-preview4.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>			
 		</previews>
 
   <!-- position the pilot viewpoint and angle -->
