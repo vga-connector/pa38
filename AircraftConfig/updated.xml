@@ -2,7 +2,7 @@
 
 <!-- Copyright (c) 2020 Josh Davidson (Octal450) -->
 
-<!-- Adapted to Cessna 152 by Adrian Fernandez (awall86) -->
+<!-- Adapted to Piper PA-38-112 "Tomahawk" by Adrian Fernandez (awall86) -->
 
 <PropertyList>
 
@@ -69,7 +69,7 @@
 			
 		<text>
 			<halign>left</halign>
-			<label>This screen will only appear after a fresh install, or update. Thank you for choosing CPiper PA-38-112 "Tomahawk"!</label>
+			<label>This screen will only appear after a fresh install, or update. Thank you for choosing Piper PA-38-112 "Tomahawk"!</label>
 		</text>
 	</group>
 	
