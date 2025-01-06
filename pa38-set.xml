@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+************************************************************************
+JSBSim Piper PA-38 Tomahawk with 3D cockpit.
+
+Started October 04 2015 by Adrian Fernández Gómez alcala_sim@yahoo.com.ar
+************************************************************************
+-->
+
+<PropertyList>
+
+    <sim>
+        <description>Piper PA-38-112 "Tomahawk"</description>
+         <long-description>The Piper PA-38 Tomahawk is a two-seat, single-engine, fixed-wing aircraft, originally designed for flight training, touring and personal use.</long-description>
+   
+        <tags>
+            <tag>ga</tag>
+            <tag>piper</tag>
+            <tag>piston</tag>
+            <tag>single-engine</tag>
+            <tag>fixed-gear</tag>
+        </tags>
+  
+        <author>awall86 (Adrian Fernandez Gomez). A special thanks to Octal450 (Josh Davidson) for his excelent Aircraft Config Center Utility</author>
+        <status>alpha</status>
+        <aircraft-version>2024.12.1A</aircraft-version>
+        <minimum-fg-version>2020.3.17</minimum-fg-version> 
+ 
+        <rating>
+            <FDM type="int">2</FDM>
+            <systems type="int">3</systems>
+            <model type="int">4</model>
+            <cockpit type="int">4</cockpit>
+        </rating>
+
+        <flight-model archive="y">jsb</flight-model>
+        <aero archive="y">pa38</aero>
+ 
+        <multiplay>
+            <generic>
+                <float n="0" alias="/sim/model/door-positions/rightDoor/position-norm"/>
+                <float n="1" alias="/sim/model/door-positions/leftDoor/position-norm"/>
+            </generic>
+        </multiplay>
+ 
+        <model>
+            <path archive="y">Aircraft/pa38/Models/pa38.xml</path>   
+            <lighting>
+                <landing type="bool">false</landing>
+            </lighting>
+
+                 <!-- Event sounds -->
+			<pa38>
+				<sound>
+					<click-master-bat type="bool">false</click-master-bat>
+					<click-master-alt type="bool">false</click-master-alt>
+					<click-landing-light type="bool">false</click-landing-light>
+					<click-strobe type="bool">false</click-strobe>
+					<click-fuel-pump type="bool">false</click-fuel-pump>
+					<click-pitot-heat type="bool">false</click-pitot-heat>
+					<click-magneto-forward type="bool">false</click-magneto-forward>
+					<click-magneto-back type="bool">false</click-magneto-back>
+					<click-fuel-selector type="bool">false</click-fuel-selector>
+					<click-dial type="bool">false</click-dial>
+					<click-rotator type="bool">false</click-rotator>
+				</sound>
+				<doors>
+					<latched type="bool">false</latched>
+				</doors>
+				<chocks>
+					<NWchocks type="bool">false</NWchocks>
+					<LWchocks type="bool">false</LWchocks>
+					<RWchocks type="bool">false</RWchocks>
+				</chocks>
+			</pa38>			
+        </model>
+
+		<gui n="0" include="gui/pa38-gui.xml"/>
+        <menubar include="gui/dialogs/pa38-menu.xml"/>
+		
+        <!-- Splash screens. One is randomly chosen when FlightGear starts -->
+        <previews>
+            <preview>
+                <type>exterior</type>
+                <path>Previews/pa38-preview0.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+                <type>exterior</type>
+                <path>Previews/pa38-preview1.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+            <preview>
+				<type>exterior</type>
+                <path>Previews/pa38-preview2.jpg</path>
+                <splash type="bool">true</splash>
+            </preview>
+		</previews>
+
+  <!-- position the pilot viewpoint and angle -->
+ 
+        <view>
+            <internal type="bool" archive="y">true</internal>
+            <config>
+                <x-offset-m archive="y" type="double">-0.20</x-offset-m>
+                <y-offset-m archive="y" type="double">0.460</y-offset-m>
+                <z-offset-m archive="y" type="double">2.70</z-offset-m>
+                <pitch-offset-deg type="double">-11.5</pitch-offset-deg>
+                <default-field-of-view-deg>75</default-field-of-view-deg>
+            </config>
+        </view>
+  
+        <view n="1">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+
+        <view n="2">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+
+        <view n="3">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+
+        <view n="4">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+
+        <view n="5">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+
+        <view n="6">
+            <config>
+                <target-z-offset-m archive="y" type="double"> 2 </target-z-offset-m>
+            </config>
+        </view>
+  
+        <systems>
+            <property-rule n="100">
+				<path archive="y">Aircraft/pa38/Systems/engine.xml</path>
+			</property-rule>
+            <property-rule n="101">
+                <name>FiltersOnly</name>
+                <path>Systems/instruments.xml</path>
+            </property-rule>
+            <property-rule n="102">
+                <path archive="y">Aircraft/pa38/Systems/lights.xml</path>
+            </property-rule>  
+ </systems>
+
+        <sound>
+            <path archive="y">pa38-sound.xml</path>
+        </sound>
+ 
+        <dimensions>
+            <radius-m type="double">5</radius-m>
+        </dimensions>
+
+        <aircraft-class type="string">ga</aircraft-class>
+        <aircraft-operator type="string">NONE</aircraft-operator>
+
+        <flight-recorder>
+            <replay-config type="int">0</replay-config>
+            <config n="0" include="/Aircraft/Generic/flightrecorder/generic-piston-propeller-1.xml">
+                <name type="string">PA-38 Flight Recorder</name>
+            </config>
+        </flight-recorder>
+        
+    </sim>
+
+    <controls>
+
+        <flight>
+            <aileron-trim type="double">0.027</aileron-trim>
+            <rudder-trim type="double">0.0</rudder-trim>
+        </flight>
+
+        <switches>
+            <master-bat type="bool">false</master-bat>
+            <master-alt type="bool">false</master-alt>
+            <magnetos type="double">0</magnetos>
+			<starter type="bool">false</starter>
+            <master-avionics type="bool">true</master-avionics>
+        </switches>
+    
+        <circuit-breakers>
+            <transponder type="bool">true</transponder>
+            <landing_lt type="bool">true</landing_lt>
+            <master type="bool">true</master>
+            <nav_lt type="bool">true</nav_lt>
+            <pitot-heat type="bool">true</pitot-heat>
+            <fuel-pump type="bool">true</fuel-pump>
+            <engine-gages type="bool">true</engine-gages>
+            <anti-coll_lt type="bool">true</anti-coll_lt>
+            <starter type="bool">true</starter>
+            <comm1 type="bool">true</comm1>
+            <comm2 type="bool">false</comm2>
+            <nav1 type="bool">true</nav1>
+            <nav2 type="bool">false</nav2>
+            <adf type="bool">true</adf>
+            <audio-mkr type="bool">true</audio-mkr>
+            <turn-coord type="bool">true</turn-coord>			
+            <warn-lt type="bool">true</warn-lt>
+            <stall-warn type="bool">true</stall-warn>
+            <panel_lt type="bool">true</panel_lt>
+            <alt-field type="bool">true</alt-field>
+        </circuit-breakers>
+
+        <lighting>
+            <landing-lights type="bool">false</landing-lights>
+            <strobe type="bool">false</strobe>
+            <nav-lights type="bool">false</nav-lights>
+        </lighting>
+ 
+		<engines>
+			<engine>
+				<mixture type="double">0</mixture>
+				<primer type="double">0</primer>
+                <primer-lever type="bool">false</primer-lever>
+                <use-primer type="bool">false</use-primer>
+			</engine>
+		</engines>
+
+		<gear>
+			<brake-parking type="bool">true</brake-parking>
+		</gear>
+    </controls>
+ 
+    <limits>
+        <max-flap-extension-speed>
+            <flaps>0.6176</flaps>
+            <speed>102</speed>
+        </max-flap-extension-speed>
+        <max-flap-extension-speed>
+            <flaps>1.000</flaps>
+            <speed>89</speed>
+        </max-flap-extension-speed>
+ 
+        <vne>138</vne>
+ 
+        <max-positive-g>4.4</max-positive-g>
+        <max-negative-g>-1.76</max-negative-g>    
+    </limits>
+
+    <consumables>
+        <fuel>
+            <tank n="0">
+                <name type="string">carb Bowl</name>
+            </tank>
+            
+            <tank n="1">
+                <name type="string">Left Wing</name>
+                <capacity-gal_us type="double">16.0</capacity-gal_us>
+                <unusable-gal_us type="double">0.75</unusable-gal_us>
+                <level-gal_us type="double">12</level-gal_us>
+            </tank>
+
+           <tank n="2">
+               <name type="string">Right Wing</name>
+               <capacity-gal_us type="double">16.0</capacity-gal_us>
+               <unusable-gal_us type="double">0.75</unusable-gal_us>
+               <level-gal_us type="double">12</level-gal_us>
+           </tank>
+        </fuel>
+    </consumables>
+	
+    <nasal> 
+        <pa38>
+            <file>Nasal/pa38.nas</file>
+            <file>Nasal/engine.nas</file>
+            <file>Nasal/doors.nas</file>
+        </pa38>
+        <electrical>
+            <file>Nasal/electrical.nas</file>
+        </electrical>
+		<garmin196>
+			<file>Nasal/garmin196.nas</file>
+		</garmin196>
+        <acconfig>
+            <file>Aircraft/pa38/AircraftConfig/acconfig.nas</file>
+        </acconfig>
+        <light-manager>
+            <file>Nasal/light-manager.nas</file>
+        </light-manager>
+    </nasal>  
+ 
+     <systems>
+        <pa38>
+            <electrical>
+                <battery-status type="double">100.0</battery-status>
+            </electrical>
+        </pa38>
+    </systems>
+ 
+    <payload>
+        <weight>
+            <name type="string">Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[0]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">300.0</max-lb>
+        </weight>
+        <weight>
+            <name type="string">Co-Pilot</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[1]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">300.0</max-lb>
+        </weight>
+        <weight>
+            <name type="string">Baggage</name>
+            <weight-lb alias="/fdm/jsbsim/inertia/pointmass-weight-lbs[4]"/>
+            <min-lb type="double">0.0</min-lb>
+            <max-lb type="double">110.0</max-lb> <!-- WARNING: Max baggage "by the book" is 120lbs or less! -->
+        </weight>
+    </payload>
+
+    <limits>
+        <mass-and-balance>
+            <maximum-ramp-mass-lbs>1670</maximum-ramp-mass-lbs>
+            <maximum-takeoff-mass-lbs>1670</maximum-takeoff-mass-lbs>
+            <maximum-landing-mass-lbs>1670</maximum-landing-mass-lbs>
+        </mass-and-balance>
+    </limits>
+    <instrumentation>
+        <transponder>
+            <ident_status type="int">0</ident_status>
+            <ident_light type="double">0.0</ident_light>
+            <ident_light_status type="int">0</ident_light_status>           
+            <inputs>
+                <knob-mode type="int">0</knob-mode>
+            </inputs>
+        </transponder>
+
+        <nav>
+            <power-btn type="int">0</power-btn>
+        </nav>
+
+        <comm>
+            <power-btn type="int">0</power-btn>
+        </comm>
+
+        <garmin196>
+            <texture-file>Aircraft/pa38/Models/panel/instruments/garmin196/coque.png</texture-file>
+        </garmin196>
+
+    </instrumentation>
+
+</PropertyList>
