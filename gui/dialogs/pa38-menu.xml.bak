@@ -12,7 +12,7 @@
                 <label>Autostart</label>
                 <binding>
                     <command>nasal</command>
-                    <script>pa38.autostart()</script>
+                    <script>c172p.autostart()</script>
                 </binding>
             </item>
             
@@ -25,26 +25,13 @@
             </item>
 
             <item>
-                <label>Aircraft Options</label>
+                <label>Registration</label>
                 <binding>
                     <command>dialog-show</command>
-                    <dialog-name>aircraft-dialog</dialog-name>
+                    <dialog-name>registration-dialog</dialog-name>
                 </binding>
             </item>
- 
- <item>
-                <label>------------------</label>
-                <enabled>false</enabled>
-            </item>
-            
-            <item>
-                <label>About This Aircraft</label>
-                <binding>
-                    <command>dialog-show</command>
-                    <dialog-name>pa38-about-dialog</dialog-name>
-                </binding>
 
-            </item>	 
         </menu>
 
     </default>
