@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>R-fuel-ind.ac</path>
+
+<!-- <animation>
+  <type>material</type>
+  <object-name>Fuel-base</object-name>
+  <object-name>LFuelNeedle</object-name>
+  <object-name>RFuelNeedle</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>sim/model//material/instruments/factor</factor-prop>
+  </emission>
+ </animation> -->
+
+    <animation>
+        <type>noshadow</type>
+		<object-name>R-fuel-glass</object-name>
+	</animation>
+
+ <animation>
+  <type>rotate</type>
+  <object-name>R-fuel-needle</object-name>
+  <property>consumables/fuel/tank[2]/level-gal_us</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind>
+    <dep>0</dep>
+   </entry>
+   <entry>
+    <ind>5</ind>
+    <dep>-32</dep>
+   </entry>
+   <entry>
+    <ind>10</ind>
+    <dep>-62</dep>
+   </entry>
+   <entry>
+    <ind>16</ind>
+    <dep>-87</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0.000</x-m>
+   <y-m>-0.01206</y-m>
+   <z-m>0.000</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
+

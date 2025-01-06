@@ -1,0 +1,155 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>engine.ac</path>
+
+<!-- <animation>
+  <type>material</type>
+  <object-name>Oil-base</object-name>
+  <object-name>OilPressNeedle</object-name>
+  <object-name>OilTempNeedle</object-name>
+  <emission>
+   <red>1.0</red>
+   <green>0.2</green>
+   <blue>0.0</blue>
+   <factor-prop>sim/model//material/instruments/factor</factor-prop>
+  </emission>
+ </animation> -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>oil_temp_needle</object-name>
+		<property>engines/engine/oil-temperature-degf</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>75</ind>
+				<dep>5</dep>
+			</entry>
+			<entry>
+				<ind>180</ind>
+				<dep>28</dep>
+			</entry>
+			<entry>
+				<ind>245</ind>
+				<dep>68</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.001478</x-m>
+			<y-m>-0.030106</y-m>
+			<z-m>-0.027439</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+ 
+	<animation>
+		<type>rotate</type>
+		<object-name>oil_press_needle</object-name>
+		<property>engines/engine/oil-pressure-psi</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>25</ind>
+				<dep>5</dep>
+			</entry>
+			<entry>
+				<ind>60</ind>
+				<dep>44</dep>
+			</entry>
+			<entry>
+				<ind>100</ind>
+				<dep>68</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.00148</x-m>
+			<y-m>0.03011</y-m>
+			<z-m>-0.027439</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>alt_amps_needle</object-name>
+		<property>systems/pa38/electrical/amps</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>30</ind>
+				<dep>27</dep>
+			</entry>
+			<entry>
+				<ind>60</ind>
+				<dep>51</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.001478</x-m>
+			<y-m>-0.030106</y-m>
+			<z-m>0.030602</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel_press_needle</object-name>
+		<property>engines/engine[0]/fuel-flow-gph</property>
+		<interpolation>
+			<entry>
+				<ind>0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>0.45</ind>
+				<dep>32</dep>
+			</entry>
+			<entry>
+				<ind>8</ind>
+				<dep>45</dep>
+			</entry>
+			<entry>
+				<ind>10</ind>
+				<dep>46</dep>
+			</entry>
+		</interpolation>
+		<center>
+			<x-m>0.00148</x-m>
+			<y-m>0.03011</y-m>
+			<z-m>0.030603</z-m>
+		</center>
+		<axis>
+			<x>-1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+</PropertyList>
+
+

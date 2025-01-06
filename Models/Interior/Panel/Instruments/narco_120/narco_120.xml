@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <params>
+        <comm-serviceable>instrumentation/comm[0]/serviceable</comm-serviceable>
+        <power-comm>instrumentation/comm[0]/power-btn</power-comm>
+        <comm-frq-selected>instrumentation/comm[0]/frequencies/selected-mhz</comm-frq-selected>
+        <comm-frq-enteros>instrumentation/comm[0]/frequencies/enteros-mhz</comm-frq-enteros>
+        <comm-frq-decimal1>instrumentation/comm[0]/frequencies/decimal1-mhz</comm-frq-decimal1>
+        <comm-frq-decimal2y3>instrumentation/comm[0]/frequencies/decimal2y3-mhz</comm-frq-decimal2y3>
+        <comm-dial-khz-0>instrumentation/comm[0]/frequencies/dial-khz-0</comm-dial-khz-0>
+		<comm-dial-khz-1>instrumentation/comm[0]/frequencies/dial-khz-1</comm-dial-khz-1>
+        <comm-dial-mhz>instrumentation/comm[0]/frequencies/dial-mhz</comm-dial-mhz>
+        <comm-volume>instrumentation/comm[0]/volume-selected</comm-volume>
+        <comm-test>instrumentation/comm[0]/test-btn</comm-test>
+    </params>
+
+ <path>narco_120.ac</path>
+
+	
+	<!-- Comm part -->
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CommUse10M</object-name>
+		<property alias="../../params/comm-frq-selected"/>
+		<step>10</step>
+		<factor>0.01</factor>
+		<bias>0.0001</bias>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CommUse1M</object-name>
+		<property alias="../../params/comm-frq-selected"/>
+		<step>1</step>
+		<factor>0.1</factor>
+		<bias>0.0001</bias>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>CommUse100K</object-name>
+		<property alias="../../params/comm-frq-selected"/>
+		<step>0.1</step>
+		<factor>1</factor>
+		<bias>0.0001</bias>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+   <animation>
+        <type>textranslate</type>
+        <object-name>CommUse10K</object-name>
+        <property alias="../../params/comm-frq-selected"/>
+        <step>0.01</step>
+        <factor>10</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+   <animation>
+        <type>textranslate</type>
+        <object-name>CommUse1K</object-name>
+        <property alias="../../params/comm-frq-selected"/>
+        <step>0.001</step>
+        <factor>100</factor>
+        <bias>0.0001</bias>
+        <axis>
+            <x>1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+ <!-- actions -->
+
+	<animation>
+		<type>knob</type>
+		<object-name>CommVolume</object-name>
+		<property alias="../../params/comm-volume"/>
+		<factor>-280</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0139</x-m>
+			<y-m>-0.07525</y-m>
+			<z-m>-0.01905</z-m>
+		</center>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="../../../../params/comm-volume"/>
+				<factor>0.1</factor>
+				<min>0.0</min>
+				<max>1.0</max>
+				<wrap>false</wrap>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("dial")</script>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>comm-volume</tooltip-id>
+				<label>Volume: %3d%%</label>
+				<property alias="../../../../params/comm-volume"/>
+				<mapping>percent</mapping>
+			</binding>
+		</hovered>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CommKHz-0</object-name>
+		<property alias="/params/comm-dial-khz-0"/>
+		<factor>-0.25</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0128</x-m>
+			<y-m>0.043289</y-m>
+			<z-m>-0.002489</z-m>
+		</center>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-frq-decimal1"/>
+				<factor>0.1</factor>
+				<min>0.0</min>
+				<max>1.0</max>
+				<resolution>0.1</resolution>
+				<wrap>true</wrap>
+				<mask>decimal</mask>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-dial-khz-0"/>
+				<factor>4</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("dial")</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>knob</type>
+		<object-name>CommKHz-1</object-name>
+		<property alias="/params/comm-dial-khz-1"/>
+		<factor>-0.25</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0128</x-m>
+			<y-m>0.043289</y-m>
+			<z-m>-0.002489</z-m>
+		</center>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-frq-decimal2y3"/>
+				<factor>0.025</factor>
+				<min>0.0</min>
+				<max>0.1</max>
+				<resolution>0.025</resolution>
+				<wrap>true</wrap>
+				<mask>decimal</mask>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-dial-khz-1"/>
+				<factor>4</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("dial")</script>
+			</binding>
+		</action>
+	</animation>
+	
+	<animation>
+		<type>knob</type>
+		<object-name>CommMHz</object-name>
+		<property alias="/params/comm-dial-mhz"/>
+		<factor>-0.25</factor>
+		<axis>
+			<x>1</x>
+			<y>0</y>
+			<z>0</z>
+		</axis>
+		<center>
+			<x-m>0.0128</x-m>
+			<y-m>-0.044689</y-m>
+			<z-m>-0.002489</z-m>
+		</center>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-frq-enteros"/>
+				<factor>1</factor>
+				<min>118.0</min>
+				<max>137.0</max>
+				<wrap>true</wrap>
+				<mask>integer</mask>
+			</binding>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/comm-dial-mhz"/>
+				<factor>4</factor>
+				<min>0</min>
+				<max>360</max>
+				<wrap>true</wrap>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("dial")</script>
+			</binding>
+		</action>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>Comm_Mode</object-name>
+		<property alias="/params/power-comm"/>
+		<factor>-50</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0.0139</x-m>
+			<y-m>0.0757</y-m>
+			<z-m>-0.0191</z-m>
+		</center>
+	</animation>
+	<animation>
+		<type>knob</type>
+		<visible>true</visible>
+		<object-name>Comm_Mode</object-name>
+		<action>
+			<binding>
+				<command>property-adjust</command>
+				<property alias="/params/power-comm"/>
+				<factor>1</factor>
+				<min>0</min>
+				<max>1</max>
+				<wrap>0</wrap>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("rotator")</script>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>comm-switch</tooltip-id>
+				<label>Comm Radio: %s</label>
+				<mapping>on-off</mapping>
+				<property alias="/params/power-comm"/>
+			</binding>
+		</hovered>
+	</animation>
+
+</PropertyList>
+
+
