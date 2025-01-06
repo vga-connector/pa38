@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+	<path>alt_ind.ac</path>
+
+	<animation>
+		<object-name>alt_ind_glow</object-name>
+		<type>select</type>
+		<condition>
+			<and>
+                <greater-than>
+                    <property>/systems/pa38/electrical/volts</property>
+                    <value>5.0</value>
+                </greater-than>
+				<or>
+					<less-than>
+						<property>systems/pa38/electrical/suppliers/alternator</property>
+						<value>6.2</value>
+					</less-than>
+					<less-than>
+						<property>controls/switches/master-alt</property>
+						<value>1</value>
+					</less-than>
+				</or>
+			</and>
+		</condition>
+	</animation>
+
+	<animation> 
+		<type>material</type> 
+		<object-name>alt_ind_glow</object-name>
+		<emission>
+			<red>0.8</red>
+			<green>0.6</green>
+			<blue>0.1</blue>
+		</emission>
+	</animation>
+
+</PropertyList>
+
+

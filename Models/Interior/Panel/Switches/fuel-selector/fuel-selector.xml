@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+ <path>fuel-selector.ac</path>
+
+	fuel tank selector		
+	<animation>
+		<type>rotate</type>
+		<object-name>fuel-selector</object-name>
+		<property>controls/fuel/fuel-selector</property>
+		<factor>-92</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
+	</animation>
+
+   <animation>
+        <type>knob</type>
+        <object-name>fuel-selector</object-name>
+        <visible>true</visible>
+        <drag-scale-px>20</drag-scale-px>
+        <action>
+            <binding>
+                <command>property-cycle</command>
+                <property>controls/fuel/fuel-selector</property>
+                <wrap>0</wrap>
+                <value>0</value>
+                <!-- OFF -->
+                <value>1</value>
+                <!-- left tank -->
+                <value>2</value>
+                <!-- right Tank -->
+           </binding>
+     <binding>
+         <command>nasal</command>
+         <script>pa38.click("fuel-selector")</script>
+     </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>fuel-selector-state-btn</tooltip-id>
+                <label>Fuel Tank Selected: %s</label>
+                <property>controls/fuel/fuel-selector</property>
+                <mapping>nasal</mapping>
+                <script>
+                    var m = arg[0];
+                    if(m == 1) return 'Left Fuel Tank Selected';
+                    if(m == 2) return 'Right Fuel Tank Selected';
+                    return 'OFF';
+                </script>
+            </binding>
+        </hovered>
+    </animation> 
+
+</PropertyList>
+
+
