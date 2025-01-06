@@ -19,20 +19,19 @@ var autostart = func (msg=1) {
 	setprop("/controls/fuel/fuel-selector", 1);
     setprop("/controls/engines/engine/throttle", 0.2);
     setprop("/controls/engines/engine/mixture", 0.95);
-    setprop("/controls/flight/elevator-trim", 0.0);
+    setprop("/controls/flight/elevator-trim", 0.2);
     setprop("/controls/switches/master-bat", 1);
     setprop("/controls/switches/master-alt", 1);
 
     # Setting lights
     setprop("/controls/lighting/nav-lights-switch", 1);
     setprop("/controls/lighting/strobe-switch", 1);
-    setprop("/controls/lighting/beacon-switch", 1);
 
     # Setting flaps to 0
     setprop("/controls/flight/flaps", 0.0);
 
     # All set, starting engine
-    setprop("controls/engines/engine/starter", 1);
+    setprop("controls/switches/starter", 1);
     setprop("/engines/engine/auto-start", 1);
 
     var engine_running_check_delay = 5.0;
@@ -40,7 +39,7 @@ var autostart = func (msg=1) {
         if (!getprop("/engines/engine/running")) {
             gui.popupTip("The autostart failed to start the engine. You must lean the mixture and start the engine manually.", 5);
         }
-        setprop("controls/engines/engine/starter", 0);
+        setprop("controls/switches/starter", 0);
         setprop("/engines/engine/auto-start", 0);
     }, engine_running_check_delay);
 };
