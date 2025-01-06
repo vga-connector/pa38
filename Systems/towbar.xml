@@ -7,7 +7,7 @@ Author: 12/2023  Benedikt Hallinger
 <system name="towbar">
     <property type="bool"   value="0">external_reactions/towbar/attached</property>
     <property type="double" value="0">external_reactions/towbar/steer-deg</property>
-    <property type="double" value="0">external_reactions/towbar/magnitude</property>
+<!--    <property type="double" value="0">external_reactions/towbar/magnitude</property> -->
     <property type="double" value="0">external_reactions/towbar/mouse-handling/x</property>
     <property type="double" value="0">external_reactions/towbar/mouse-handling/y</property>
 
