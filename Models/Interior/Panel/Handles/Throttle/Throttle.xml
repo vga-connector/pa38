@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<!--    <effect>
+        <inherits-from>Aircraft/c152/Models/Effects/interior/c152-interior-compartment</inherits-from>
+        <object-name>Mixture</object-name>
+    </effect> -->
+    
+    <path>throttle.ac</path>
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Throttle-1</object-name>
+        <object-name>Throttle-2</object-name>
+        <property>controls/engines/engine/throttle</property>
+        <factor>-98</factor>
+        <axis>
+            <x>0.0</x>
+            <y>1.0</y>
+            <z>0.0</z>
+        </axis>
+    </animation>
+    <animation>
+        <type>slider</type>
+        <object-name>Throttle-2</object-name>
+        <visible>true</visible>
+        <drag-direction>vertical</drag-direction>
+        <action>
+            <binding>
+                <command>property-adjust</command>
+                <property>controls/engines/engine/throttle</property>
+                <factor>0.05</factor>
+                <min>0</min>
+                <max>1</max>
+                <wrap>0</wrap>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <label>Throttle: %3d%%</label>
+                <measure-text>Mixture: 100%</measure-text>
+                <tooltip-id>mixture</tooltip-id>
+                <mapping>percent</mapping>
+                <property>controls/engines/engine/throttle</property>
+            </binding>
+        </hovered>
+    </animation>
+</PropertyList>
