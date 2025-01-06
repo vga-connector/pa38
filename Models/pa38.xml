@@ -1,0 +1,1978 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+<path>pa38.ac</path>
+
+<!-- Register transparent objects for Rembrandt effects -->
+	<effect>
+<!-- 		<inherits-from>Aircraft/pa38/Models/Effects/pa38-glass</inherits-from> -->
+		<inherits-from>Aircraft/pa38/Models/Effects/exterior-glass-reflection</inherits-from>
+		<object-name>WindShield</object-name>
+		<object-name>RearWindows</object-name>
+		<object-name>Rwindow</object-name>
+		<object-name>Lwindow</object-name>
+	</effect>
+
+    <effect>
+        <inherits-from>Effects/model-transparent</inherits-from>
+        <object-name>propellerF</object-name>
+        <object-name>propellerR</object-name>
+    </effect>
+
+    <animation>
+        <type>noshadow</type>
+		<object-name>WindShield</object-name>
+		<object-name>RearWindows</object-name>
+		<object-name>Rwindow</object-name>
+		<object-name>Lwindow</object-name>
+		<object-name>clock_glass</object-name>
+		<object-name>asi_glass</object-name>
+		<object-name>alt_glass</object-name>
+		<object-name>hi_glass</object-name>
+		<object-name>adf_glass</object-name>
+		<object-name>vor_glass</object-name>
+		<object-name>vsi_glass</object-name>
+		<object-name>ai_glass</object-name>
+		<object-name>hi_glass</object-name>
+		<object-name>tc_glass</object-name>
+		<object-name>vac_glass</object-name>
+		<object-name>tachometer_glass</object-name>		
+		<object-name>compass_glass</object-name>	
+        <object-name>propellerF</object-name>
+        <object-name>propellerR</object-name>
+	</animation>
+
+    <params>
+        <doors>
+            <left>sim/multiplay/generic/float[1]</left>
+            <right>sim/multiplay/generic/float[0]</right>
+        </doors>
+    </params>
+
+
+ <!-- <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>NavLightLOn</object-name>
+    <object-name>NavLightROn</object-name>
+    <object-name>BeaconLightOn</object-name>
+    <object-name>StrobeROn</object-name>
+    <object-name>StrobeLOn</object-name>
+</effect> -->
+
+<!-- Cockpit Instruments -->
+
+    <model>
+        <name>asi</name>
+        <path>Interior/Panel/Instruments/asi/asi.xml</path>
+        <offsets>
+          <x-m>1.82045</x-m>
+          <y-m>-0.367153</y-m>
+          <z-m>0.238433</z-m>
+        </offsets>
+    </model>
+ 
+    <model>
+        <name>tachometer</name>
+        <path>Interior/Panel/Instruments/tachometer/tachometer.xml</path>
+        <offsets>
+             <x-m>1.81524</x-m>
+             <y-m>-0.217171</y-m>
+             <z-m>-0.001629</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>vac</name>
+        <path>Interior/Panel/Instruments/vac/vac.xml</path>
+        <offsets>
+            <x-m>1.82345</x-m>
+            <y-m>-0.205363</y-m>
+            <z-m>0.29228</z-m>
+        </offsets>
+    </model>
+
+     <model>
+        <name>AI</name>
+        <path>Interior/Panel/Instruments/AI/AI.xml</path>
+        <offsets>
+            <x-m>1.82464</x-m>
+            <y-m>-0.258238</y-m>
+            <z-m>0.238433</z-m>
+        </offsets>
+    </model> 
+    
+    <model>
+        <name>Altimeter</name>
+        <path>Interior/Panel/Instruments/alt/alt.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.149018</y-m>
+            <z-m>0.238433</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Turn</name>
+        <path>Interior/Panel/Instruments/tc/tc.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.367001</y-m>
+            <z-m>0.115047</z-m>
+        </offsets>
+    </model> 
+    
+    <model>
+        <name>hi</name>
+        <path>Interior/Panel/Instruments/hi/hi.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.259609</y-m>
+            <z-m>0.115047</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>nav1</name>
+        <path>Interior/Panel/Instruments/narco_122/narco_122.xml</path>
+        <offsets>
+            <x-m>1.82245</x-m>
+            <y-m>-0.032783</y-m>
+            <z-m>0.115047</z-m>
+        </offsets>
+    </model>
+
+    <!-- Radios -->
+
+    <model>
+        <name>Com1</name>
+        <path>Interior/Panel/Instruments/narco_120/narco_120.xml</path>
+        <offsets>
+            <x-m>1.81955</x-m>
+            <y-m>0.138606</y-m>
+            <z-m>0.266984</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ADF1</name>
+        <path>Interior/Panel/Instruments/narco_141/narco_141.xml</path>
+        <offsets>
+            <x-m>1.81955</x-m>
+            <y-m>0.138606</y-m>
+            <z-m>0.199984</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>GPS</name>
+        <path>Interior/Panel/Instruments/garmin196/garmin196.xml</path>
+        <offsets>
+            <x-m>1.82575</x-m>
+            <y-m>0.105606</y-m>
+            <z-m>0.089984</z-m>
+        </offsets>
+    </model>
+
+    <animation>
+        <object-name>GPS</object-name>
+        <type>scale</type>
+        <x-offset>1.0</x-offset>
+        <y-offset>1.2</y-offset>
+        <z-offset>1.2</z-offset>
+    </animation>
+	
+    <model>
+        <name>VSI</name>
+        <path>Interior/Panel/Instruments/vsi/vsi.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.149018</y-m>
+            <z-m>00.115047</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>clock</name>
+        <path>Interior/Panel/Instruments/clock/clock.xml</path>
+        <offsets>
+            <x-m>1.82257</x-m>
+            <y-m>-0.46277</y-m>
+            <z-m>0.21409</z-m>
+        </offsets>
+    </model>
+   
+    <model>
+        <name>engine_indicators</name>
+        <path>Interior/Panel/Instruments/engine/engine.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>0.198379</y-m>
+            <z-m>-0.052396</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>adf</name>
+        <path>Interior/Panel/Indicators/alt_ind.xml</path>
+        <offsets>
+             <x-m>1.82645</x-m>
+             <y-m>-0.169852</y-m>
+             <z-m>0.307678</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>adf_ind</name>
+        <path>Interior/Panel/Instruments/narco_141/adf_ind.xml</path>
+        <offsets>
+             <x-m>1.82045</x-m>
+             <y-m>-0.034245</y-m>
+             <z-m>0.239715</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>RT359a</name>
+        <path>Interior/Panel/Instruments/rt359a/rt359a.xml</path>
+        <offsets>
+            <x-m>1.82575</x-m>
+            <y-m>0.344606</y-m>
+            <z-m>0.086984</z-m>
+        </offsets>
+    </model>
+    <model>
+        <name>OAT</name>
+        <path>Interior/Panel/Instruments/oat/oat.xml</path>
+        <offsets>
+            <x-m>2.0903</x-m>
+            <y-m>-0.001969</y-m>
+            <z-m>0.666697</z-m>
+			<pitch-deg>41</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>MagCompass</name>
+        <path>Interior/Panel/Instruments/compass/compass.xml</path>
+        <offsets>
+            <x-m>2.07043</x-m>
+            <y-m>0.000209</y-m>
+            <z-m>0.594638</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Fuel_Selector</name>
+        <path>Interior/Panel/Switches/fuel-selector/fuel-selector.xml</path>
+        <offsets>
+            <x-m>1.8924</x-m>
+            <y-m>-0.00100</y-m>
+            <z-m>-0.02955</z-m>
+			<pitch-deg>-40</pitch-deg>
+        </offsets>
+    </model> 
+
+    <model>
+        <name>Left_fuel_indicator</name>
+        <path>Interior/Panel/Instruments/Fuel/R-fuel-ind.xml</path>
+        <offsets>
+            <x-m>1.86613</x-m>
+            <y-m>0.04338</y-m>
+            <z-m>0.005789</z-m>
+			<pitch-deg>-38</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Right_fuel_indicator</name>
+        <path>Interior/Panel/Instruments/Fuel/L-fuel-ind.xml</path>
+        <offsets>
+            <x-m>1.86613</x-m>
+            <y-m>-0.046517</y-m>
+            <z-m>0.005789</z-m>
+			<pitch-deg>-38</pitch-deg>
+        </offsets>
+    </model>
+
+	<model>
+        <name>Mixture</name>
+        <path>Interior/Panel/Handles/Mixture/Mixture.xml</path>
+        <offsets>
+            <x-m>1.90116</x-m>
+            <y-m>0.055372</y-m>
+            <z-m>-0.070609</z-m>
+        </offsets>
+    </model>
+
+	<model>
+        <name>Throttle</name>
+        <path>Interior/Panel/Handles/Throttle/Throttle.xml</path>
+        <offsets>
+            <x-m>1.90116</x-m>
+            <y-m>-0.064572</y-m>
+            <z-m>-0.070609</z-m>
+        </offsets>
+    </model>
+    
+	<model>
+        <name>Primer</name>
+        <path>Interior/Panel/Handles/Primer/Primer.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.104089</y-m>
+            <z-m>-0.099696</z-m>
+        </offsets>
+    </model>
+
+	<model>
+        <name>CabinHeat</name>
+        <path>Interior/Panel/Handles/CabinHeat/CabinHeat.xml</path>
+        <offsets>
+            <x-m>1.80068</x-m>
+            <y-m>-0.371151</y-m>
+            <z-m>-0.055887</z-m>
+        </offsets>
+    </model>
+
+	<model>
+        <name>Defrost</name>
+        <path>Interior/Panel/Handles/CabinHeat/Defrost.xml</path>
+        <offsets>
+            <x-m>1.80068</x-m>
+            <y-m>-0.371151</y-m>
+            <z-m>-0.0318</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>mag_sw</name>
+        <path>Interior/Panel/Switches/magneto-switch/magneto-switch.xml</path>
+        <offsets>
+            <x-m>1.820</x-m>
+            <y-m>-0.323</y-m>
+            <z-m>-0.097</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>PanelLight</name>
+        <path>Interior/Panel/Switches/lights-switch/nav_panel_lights.xml</path>
+        <offsets>
+            <x-m>1.82411</x-m>
+            <y-m>0.16232</y-m>
+            <z-m>-0.108838</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>RadioLight</name>
+        <path>Interior/Panel/Switches/lights-switch/radio_lights.xml</path>
+        <offsets>
+            <x-m>1.82411</x-m>
+            <y-m>0.23249</y-m>
+            <z-m>-0.108838</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>LeftYoke</name>
+        <path>Interior/Yoke/yokeL.xml</path>
+        <offsets>
+            <x-m>1.82411</x-m>
+            <y-m>-0.300307</y-m>
+            <z-m>0.018337</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>RightYoke</name>
+        <path>Interior/Yoke/yokeR.xml</path>
+        <offsets>
+            <x-m>1.82411</x-m>
+            <y-m>0.300307</y-m>
+            <z-m>0.018337</z-m>
+        </offsets>
+    </model>
+   
+    <!-- Pedals -->
+<!--    <model>
+        <name>PilotPedals</name>
+        <path>Interior/Pedals/pedals.xml</path>
+        <offsets>
+            <x-m>1.508</x-m>
+            <y-m>-0.24</y-m>
+            <z-m>-0.29</z-m>
+        </offsets>
+    </model>
+   <model>
+        <name>CoPilotPedals</name>
+        <path>Interior/Pedals/pedals.xml</path>
+        <offsets>
+            <x-m>1.508</x-m>
+            <y-m>0.24</y-m>
+            <z-m>-0.29</z-m>
+        </offsets>
+    </model> -->
+    
+<!-- Cockpit Switches -->
+
+    <model>
+        <name>Batt_Switch</name>
+        <path>Interior/Panel/Switches/battery-switch/batt-switch.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.38951</y-m>
+            <z-m>-0.10143</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Alt_Switch</name>
+        <path>Interior/Panel/Switches/alt-switch/alt-switch.xml</path>
+        <offsets>
+            <x-m>1.81964</x-m>
+            <y-m>-0.37531</y-m>
+            <z-m>-0.10143</z-m>
+        </offsets>
+    </model>
+    
+    <model>
+        <name>Pitot_Heat_Switch</name>
+        <path>Interior/Panel/Switches/pitot-heat-switch/pitot-heat-switch.xml</path>
+        <offsets>
+            <x-m>1.81985</x-m>
+            <y-m>-0.167172</y-m>
+            <z-m>-0.10124</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Anti-Collision_Light_Switch</name>
+        <path>Interior/Panel/Switches/anticoll-light-switch/anticoll-light-switch.xml</path>
+        <offsets>
+            <x-m>1.81985</x-m>
+            <y-m>-0.200272</y-m>
+            <z-m>-0.10124</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Landing_Light_Switch</name>
+        <path>Interior/Panel/Switches/landing-light-switch/landing-light-switch.xml</path>
+        <offsets>
+            <x-m>1.81985</x-m>
+            <y-m>-0.233272</y-m>
+            <z-m>-0.10124</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Fuel_Pump_Switch</name>
+        <path>Interior/Panel/Switches/fuel-pump-switch/fuel-pump-switch.xml</path>
+        <offsets>
+            <x-m>1.81985</x-m>
+            <y-m>-0.266372</y-m>
+            <z-m>-0.10124</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Carb_Heat</name>
+        <path>Interior/Panel/Handles/CarbHeat/CarbHeat.xml</path>
+        <offsets>
+            <x-m>1.80068</x-m>
+            <y-m>-0.130813</y-m>
+            <z-m>-0.010315</z-m>
+        </offsets>
+    </model>
+
+   <model>
+        <name>Trim</name>
+        <path>Interior/Panel/Handles/Trim/Trim.xml</path>
+        <offsets>
+            <x-m>2.32699</x-m>
+            <y-m>-0.01000</y-m>
+            <z-m>-0.225044</z-m>
+        </offsets>
+    </model>
+	
+   <model>
+        <name>Flaps_lever</name>
+        <path>Interior/Panel/Handles/Flaps/Flaps_lever.xml</path>
+        <offsets>
+            <x-m>2.20765</x-m>
+            <y-m>-0.002902</y-m>
+            <z-m>-0.2254</z-m>
+        </offsets>
+    </model>
+
+   <model>
+        <name>Flaps_lever</name>
+        <path>Interior/Panel/Handles/Prk_brake/prk_brake.xml</path>
+        <offsets>
+            <x-m>1.80528</x-m>
+            <y-m>-0.115526</y-m>
+            <z-m>-0.14675</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Air_Vent1</name>
+        <path>Interior/Panel/AirVent/AirVent-1.xml</path>
+        <offsets>
+            <x-m>1.82335</x-m>
+            <y-m>-0.489413</y-m>
+            <z-m>-0.022888</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Air_Vent2</name>
+        <path>Interior/Panel/AirVent/AirVent-2.xml</path>
+        <offsets>
+            <x-m>1.82355</x-m>
+            <y-m>0.489413</y-m>
+            <z-m>-0.022888</z-m>
+        </offsets>
+    </model>
+
+<!-- Circuit Breakers -->
+
+
+
+    <model>
+        <name>Starter_CB</name>
+        <path>Interior/Panel/CircuitBreakers/starter_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.328617</y-m>
+            <z-m>-0.026099</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Alternator_field_CB</name>
+        <path>Interior/Panel/CircuitBreakers/alt-field_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.351742</y-m>
+            <z-m>-0.026099</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Turn_coordinator_field_CB</name>
+        <path>Interior/Panel/CircuitBreakers/turn-coord_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.374555</y-m>
+            <z-m>-0.026099</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Pitot_heat_field_CB</name>
+        <path>Interior/Panel/CircuitBreakers/pitot-heat_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.398581</y-m>
+            <z-m>-0.026099</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Warning_light_field_CB</name>
+        <path>Interior/Panel/CircuitBreakers/warn_lt_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.421767</y-m>
+            <z-m>-0.026099</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Comm1_CB</name>
+        <path>Interior/Panel/CircuitBreakers/comm1_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.282932</y-m>
+            <z-m>-0.066569</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Nav1_CB</name>
+        <path>Interior/Panel/CircuitBreakers/nav1_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.305175</y-m>
+            <z-m>-0.066569</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>ADF_CB</name>
+        <path>Interior/Panel/CircuitBreakers/adf_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.373199</y-m>
+            <z-m>-0.066569</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Audio-mkr_CB</name>
+        <path>Interior/Panel/CircuitBreakers/audio-mkr_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.396418</y-m>
+            <z-m>-0.066569</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Transponder_CB</name>
+        <path>Interior/Panel/CircuitBreakers/transponder_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.421764</y-m>
+            <z-m>-0.066569</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Engine_gages_CB</name>
+        <path>Interior/Panel/CircuitBreakers/engine-gages_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.281927</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Stall_warning_CB</name>
+        <path>Interior/Panel/CircuitBreakers/stall-warn_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.305039</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Nav_Lights_CB</name>
+        <path>Interior/Panel/CircuitBreakers/nav_lt_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.351399</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Landing_Light_CB</name>
+        <path>Interior/Panel/CircuitBreakers/landing_lt_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.328225</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Anti-Coll_Lights_CB</name>
+        <path>Interior/Panel/CircuitBreakers/anti-coll_lt_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.374524</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+
+    <model>
+        <name>Panel_Lights_CB</name>
+        <path>Interior/Panel/CircuitBreakers/panel_lt_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.397605</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+	
+    <model>
+        <name>Fuel_pump_CB</name>
+        <path>Interior/Panel/CircuitBreakers/fuel-pump_circuitbreaker.xml</path>
+        <offsets>
+            <x-m>1.82358</x-m>
+            <y-m>0.419958</y-m>
+            <z-m>-0.106512</z-m>
+        </offsets>
+    </model>
+
+
+<!-- ALS Navigation Lights -->
+	<model>
+		<name>RedLight1</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m>2.29329</x-m>
+			<y-m>-5.32997</y-m>
+			<z-m>0.020727</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>RedLight1</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>1.0</x>
+					<y>2.0</y>
+					<z>0.8</z>
+				</direction>
+				<ambient>
+					<r>0.5</r>
+					<g>0</g>
+					<b>0</b>
+				</ambient>
+				<specular>
+					<r>1.0</r>
+					<g>0.7</g>
+					<b>0.5</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+	<model>
+		<name>RedLight2</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m>2.29329</x-m>
+			<y-m>-5.32997</y-m>
+			<z-m>0.020727</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>RedLight2</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>-1.0</x>
+					<y> 3.0</y>
+					<z> 0.8</z>
+				</direction>
+				<ambient>
+					<r>0.5</r>
+					<g>0</g>
+					<b>0</b>
+				</ambient>
+				<specular>
+					<r>1.0</r>
+					<g>0.7</g>
+					<b>0.5</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+	<model>
+		<name>GreenLight1</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m> 2.29369</x-m>
+			<y-m> 5.32894</y-m>
+			<z-m> 0.021454</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>GreenLight1</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>1.0</x>
+					<y>-2.0</y>
+					<z> 0.8</z>
+				</direction>
+				<ambient>
+					<r>0</r>
+					<g>0.5</g>
+					<b>0</b>
+				</ambient>
+				<specular>
+					<r>0.7</r>
+					<g>1.0</g>
+					<b>0.5</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+	<model>
+		<name>GreenLight2</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m> 2.29369</x-m>
+			<y-m> 5.32894</y-m>
+			<z-m> 0.021454</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>GreenLight2</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>-1.3</x>
+					<y>-3.0</y>
+					<z> 0.8</z>
+				</direction>
+				<ambient>
+					<r>0</r>
+					<g>0.5</g>
+					<b>0</b>
+				</ambient>
+				<specular>
+					<r>0.7</r>
+					<g>1.0</g>
+					<b>0.5</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+	<model>
+		<name>WhiteLight1</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m> 7.48836</x-m>
+			<y-m> 0.000281</y-m>
+			<z-m> 1.41145</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>WhiteLight1</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>-1.0</x>
+					<y>-1.0</y>
+					<z> 0.5</z>
+				</direction>
+				<ambient>
+					<r>1.0</r>
+					<g>1.0</g>
+					<b>1.0</b>
+				</ambient>
+				<specular>
+					<r>0.3</r>
+					<g>0.3</g>
+					<b>0.3</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+	<model>
+		<name>WhiteLight2</name>
+		<path>Aircraft/Generic/spotlight.xml</path>
+		<offsets>
+			<x-m> 7.48836</x-m>
+			<y-m> 0.000281</y-m>
+			<z-m> 1.41145</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>WhiteLight2</name>
+				<power-source>/controls/lighting/nav-lights</power-source>
+				<direction>
+					<x>-1.0</x>
+					<y> 1.0</y>
+					<z> 0.5</z>
+				</direction>
+				<ambient>
+					<r>1.0</r>
+					<g>1.0</g>
+					<b>1.0</b>
+				</ambient>
+				<specular>
+					<r>0.3</r>
+					<g>0.3</g>
+					<b>0.3</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
+    <!-- Left strobe light --> 
+    <model>
+        <name>strobe-light-right</name>
+        <path>Aircraft/pa38/Models/Effects/lights/procedural_light_right_strobe.xml</path>
+        <offsets>
+			<x-m> 2.35369</x-m>
+			<y-m> 5.32894</y-m>
+			<z-m> 0.021454</z-m>
+        </offsets>
+    </model>
+    <animation>
+        <type>select</type>
+        <object-name>strobe-light-right</object-name> 
+        <nopreview/>
+        <condition>
+            <and>
+		<property>controls/lighting/strobe</property>
+                <property>/sim/rendering/shaders/skydome</property>
+            </and>
+        </condition>
+    </animation>
+
+    <!-- Right strobe light --> 
+    <model>
+        <name>strobe-light-left</name>
+        <path>Aircraft/pa38/Models/Effects/lights/procedural_light_left_strobe.xml</path>
+        <offsets>
+			<x-m>2.35329</x-m>
+			<y-m>-5.32997</y-m>
+			<z-m>0.020727</z-m>
+        </offsets>
+     </model>
+    <animation>
+        <type>select</type>
+        <object-name>strobe-light-left</object-name> 
+        <nopreview/>
+        <condition>
+            <and>
+		<property>controls/lighting/strobe</property>
+                <property>/sim/rendering/shaders/skydome</property>
+            </and>
+        </condition>
+    </animation>
+
+<!-- Propeller -->
+
+<animation>
+    <name>PropellerSlowGroup</name>
+    <object-name>propeller_slow</object-name>
+    <object-name>cone_slow</object-name>
+</animation>
+<animation>
+    <type>select</type>
+    <object-name>PropellerSlowGroup</object-name>
+    <condition>
+        <less-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>540</value>
+        </less-than>
+    </condition>
+</animation>
+ 
+<animation>
+    <type>spin</type>
+    <object-name>PropellerSlowGroup</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>-1.0</factor>
+    <center>
+        <x-m>0.336</x-m>
+        <y-m>0</y-m>
+        <z-m>0.002</z-m>
+    </center>
+    <axis>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <name>PropellerGroup</name>
+    <object-name>propellerF</object-name>
+    <object-name>propellerR</object-name>
+    <object-name>cone</object-name>
+</animation>
+
+<animation>
+    <type>select</type>
+    <object-name>PropellerGroup</object-name>
+    <condition>
+        <greater-than>
+            <property>engines/engine[0]/rpm</property>
+            <value>540</value>
+        </greater-than>
+    </condition>
+</animation>
+ 
+<animation>
+    <type>spin</type>
+    <object-name>PropellerGroup</object-name>
+    <property>engines/engine[0]/rpm</property>
+    <factor>-1.0</factor>
+    <center>
+        <x-m>0.404</x-m>
+        <y-m>0</y-m>
+        <z-m>0.002</z-m>
+    </center>
+    <axis>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+ 
+<!-- Left Main Landing Gear -->
+<animation>
+    <name>LeftWheelGroup</name>
+    <object-name>Left_Wheel</object-name>
+    <object-name>Left_Strut</object-name>
+    <object-name>Left_brake_disk</object-name>
+    <object-name>Left_brake_tube</object-name>
+	<object-name>Left_brake</object-name>
+	<object-name>Left_axis</object-name>
+</animation>
+ 
+<animation>
+    <type>spin</type>
+    <object-name>Left_Wheel</object-name>
+    <object-name>Left_brake_disk</object-name>	
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor>-47.74</factor>
+    <axis>
+        <x1-m>2.47249</x1-m>
+        <y1-m>-1.32448</y1-m>
+        <z1-m>-1.10262</z1-m>
+        <x2-m>2.47249</x2-m>
+        <y2-m>-1.26885</y2-m>
+        <z2-m>-1.10004</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>LeftWheelGroup</object-name>
+    <property>gear/gear[1]/compression-norm</property>
+    <factor>8.0</factor>
+    <axis>
+        <x>-1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+    <center>
+        <x-m>2.47186</x-m>
+        <y-m>-0.636953</y-m>
+        <z-m>-0.49811</z-m>
+    </center>
+</animation>
+
+<!-- Right Main Landing Gear -->
+
+<animation>
+    <name>RightWheelGroup</name>
+    <object-name>Right_Wheel</object-name>
+    <object-name>Right_Strut</object-name>
+    <object-name>Right_brake_disk</object-name>
+    <object-name>Right_brake_tube</object-name>
+	<object-name>Right_brake</object-name>
+	<object-name>Right_axis</object-name>
+</animation>
+
+<animation>
+    <type>spin</type>
+    <object-name>Right_Wheel</object-name>
+    <object-name>Right_brake_disk</object-name>
+    <property>gear/gear[2]/rollspeed-ms</property>
+    <factor>47.74</factor>
+    <axis>
+        <x1-m>2.47249</x1-m>
+        <y1-m>1.33023</y1-m>
+        <z1-m>-1.1025</z1-m>
+        <x2-m>2.47249</x2-m>
+        <y2-m>1.2746</y2-m>
+        <z2-m>-1.09992</z2-m>
+    </axis>
+</animation>
+  
+<animation>
+    <type>rotate</type>
+    <object-name>RightWheelGroup</object-name>
+    <property>gear/gear[2]/compression-norm</property>
+    <factor>8.0</factor>
+    <axis>
+        <x>1</x>
+        <y>0</y>
+        <z>0</z>
+    </axis>
+    <center>
+        <x-m>2.47186</x-m>
+        <y-m>0.643638</y-m>
+        <z-m>-0.488402</z-m>
+    </center>
+</animation>
+
+<!-- Nose Landing Gear -->
+
+<animation>
+    <name>Nose_Gear_Group</name>
+    <object-name>Nose_Wheel</object-name>
+    <object-name>Nose_axis</object-name>	
+    <object-name>Nose_Wheel_Base</object-name>
+    <object-name>Nose_Wheel_Mount</object-name>
+    <object-name>Nose_Wheel_Strut</object-name>
+    <object-name>Upper_damper</object-name>    
+    <object-name>Lower_damper</object-name>
+    <object-name>Upper_damper_bolt</object-name>
+</animation>
+ 
+<animation>
+    <type>translate</type>
+    <object-name>Nose_Wheel</object-name>
+	<object-name>Nose_axis</object-name>
+    <object-name>Nose_Wheel_Base</object-name>
+    <object-name>Nose_Wheel_Strut</object-name>
+    <object-name>Lower_damper</object-name>	
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>0.10</factor>
+    <axis>
+        <x>0</x>
+        <y>0</y>
+        <z>1</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Nose_Wheel</object-name>
+	<object-name>Nose_axis</object-name>
+    <object-name>Nose_Wheel_Base</object-name>
+    <object-name>Nose_Wheel_Strut</object-name>
+    <object-name>Lower_damper</object-name>	
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>7.00</factor>
+    <center>
+        <x-m>0.957236</x-m>
+        <y-m>0.000281</y-m>
+        <z-m>-1.05168</z-m>
+    </center>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>spin</type>
+    <object-name>Nose_Wheel</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor>59.6</factor>
+    <center>
+        <x-m>0.954389</x-m>
+        <y-m>0.000281</y-m>
+        <z-m>-1.08381</z-m>
+    </center>
+    <axis>
+        <x>0.0</x>
+        <y>-1.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+ 
+<animation>
+    <type>rotate</type>
+    <object-name>Nose_Gear_Group</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <offset-deg>-6.5</offset-deg>
+    <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+    </axis>
+    <center>
+        <x-m>0.835</x-m>
+        <y-m>0.0</y-m>
+        <z-m>-0.641</z-m>
+    </center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Nose_Gear_Group</object-name>
+    <condition>
+        <property>gear/gear[0]/wow</property>
+    </condition>
+    <property>gear/gear/steering-norm</property>
+    <factor>30.0</factor>
+    <axis>
+        <x1-m>1.07252</x1-m>
+        <y1-m>-0.000033</y1-m>
+        <z1-m>-0.497569</z1-m>
+        <x2-m>0.957023</x2-m>
+        <y2-m>0.000281</y2-m>
+        <z2-m>-1.05168</z2-m>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Lower_damper</object-name>
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>40</factor>
+    <offset-deg>-6</offset-deg>
+    <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+    </axis>
+    <center>
+        <x-m>1.05322</x-m>
+        <y-m>0.000009</y-m>
+        <z-m>-0.847407</z-m>
+    </center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Upper_damper</object-name>
+    <object-name>Upper_damper_bolt</object-name>	
+    <property>gear/gear[0]/compression-norm</property>
+    <factor>-40</factor>
+    <offset-deg>6</offset-deg>
+    <axis>
+        <x>0</x>
+        <y>1</y>
+        <z>0</z>
+    </axis>
+    <center>
+        <x-m>1.08371</x-m>
+        <y-m>0.003065</y-m>
+        <z-m>-0.659677</z-m>
+    </center>
+</animation>
+ 
+<!-- Control surfaces -->
+
+<!-- Flaps -->
+ 
+	<animation>
+		<type>translate</type>
+		<object-name>LFlap</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>0.01</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>LFlap</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>34</factor>
+		<axis>
+			<x1-m>2.81858</x1-m>
+			<y1-m>-2.96134</y1-m>
+			<z1-m>-0.261088</z1-m>
+			<x2-m>2.81858</x2-m>
+			<y2-m>-1.02473</y2-m>
+			<z2-m>-0.447627</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>translate</type>
+		<object-name>RFlap</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>0.01</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis>
+	</animation>
+
+	<animation>
+		<type>rotate</type>
+		<object-name>RFlap</object-name>
+		<property>surface-positions/flap-pos-norm</property>
+		<factor>-34</factor>
+		<axis>
+			<x1-m>2.81858</x1-m>
+			<y1-m>2.95445</y1-m>
+			<z1-m>-0.261088</z1-m>
+			<x2-m>2.81858</x2-m>
+			<y2-m>1.01784</y2-m>
+			<z2-m>-0.447627</z2-m>
+		</axis>
+	</animation>
+ 
+<!-- Left Aileron -->
+	<animation>
+		<type>rotate</type>
+		<object-name>LeftAileron</object-name>
+		<property>surface-positions/left-aileron-pos-norm</property>
+		<interpolation>
+			<entry>
+				<ind>-1.0</ind>
+				<dep>-15</dep>
+			</entry>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>15</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>2.81793</x1-m>
+			<y1-m>-5.15826</y1-m>
+			<z1-m>-0.056512</z1-m>
+			<x2-m>2.81793</x2-m>
+			<y2-m>-2.96622</y2-m>
+			<z2-m>-0.261088</z2-m>
+		</axis>
+	</animation>
+
+<!-- Right Aileron -->
+<animation>
+    <type>rotate</type>
+    <object-name>RightAileron</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+        <entry>
+            <ind>-1.0</ind>
+            <dep>-15</dep>
+        </entry>
+        <entry>
+            <ind>0.0</ind>
+            <dep>0</dep>
+        </entry>
+        <entry>
+            <ind>1.0</ind>
+            <dep>15</dep>
+        </entry>
+    </interpolation>
+    <axis>
+        <x1-m>2.81793</x1-m>
+        <y1-m>5.15136</y1-m>
+        <z1-m>-0.056512</z1-m>
+        <x2-m>2.81793</x2-m>
+        <y2-m>2.95933</y2-m>
+        <z2-m>-0.261088</z2-m>
+    </axis>
+</animation>
+ 
+<!-- Elevator -->
+<animation>
+    <type>rotate</type>
+    <object-name>ElevatorL</object-name>
+    <object-name>ElevatorR</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <interpolation>
+        <entry>
+            <ind>-1.0</ind>
+            <dep>15</dep>
+        </entry>
+        <entry>
+            <ind>0</ind>
+            <dep>0</dep>
+        </entry>
+        <entry>
+            <ind>1.0</ind>
+            <dep>-25</dep>
+        </entry>
+    </interpolation>
+    <axis>
+        <x1-m>6.95007</x1-m>
+        <y1-m>-1.22534</y1-m>
+        <z1-m>1.27445</z1-m>
+        <x2-m>6.94783</x2-m>
+        <y2-m>1.2237</y2-m>
+        <z2-m>1.27475</z2-m>
+    </axis>
+</animation>
+
+<!-- Elevator Trim --> 
+<!--<animation>
+    <type>rotate</type>
+    <object-name>ElevatorTrim</object-name>
+    <property>controls/flight/elevator-trim</property>
+    <factor>25</factor>
+    <axis>
+        <x1-m>6.595</x1-m>
+        <y1-m>-0.207</y1-m>
+        <z1-m>-0.084</z1-m>
+        <x2-m>6.469</x2-m>
+        <y2-m>-1.414</y2-m>
+        <z2-m>-0.084</z2-m>
+    </axis>
+</animation> -->
+ 
+<!-- Rudder --> 
+<animation>
+    <type>rotate</type>
+    <object-name>Rudder</object-name>
+	<object-name>Nav_light_tail</object-name>
+	<object-name>WhiteLight1</object-name>	
+	<object-name>WhiteLight2</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <interpolation>
+        <entry>
+            <ind>-1.0</ind>
+            <dep>25</dep>
+        </entry>
+        <entry>
+            <ind>0</ind>
+            <dep>0</dep>
+        </entry>
+        <entry>
+            <ind>1.0</ind>
+            <dep>-25</dep>
+        </entry>
+    </interpolation>
+    <axis>
+        <x1-m>6.96375</x1-m>
+        <y1-m>-0.000335</y1-m>
+        <z1-m>1.40422</z1-m>
+        <x2-m>6.60558</x2-m>
+        <y2-m>0.000073</y2-m>
+        <z2-m>-0.163715</z2-m>
+    </axis>
+</animation> 
+
+<!-- Rudder Pedals -->
+
+<animation>
+    <name>right_pedals</name>
+    <object-name>Pilot_Right_pedal</object-name>
+    <object-name>Pilot_Right_pedal1</object-name>
+    <object-name>Pilot_Right_pedal2</object-name>
+    <object-name>Pilot_Right_pedal3</object-name>
+    <object-name>Pilot_Right_pedal4</object-name>
+    <object-name>Copilot_Right_pedal</object-name>
+    <object-name>Copilot_Right_pedal1</object-name>
+    <object-name>Copilot_Right_pedal2</object-name>
+    <object-name>Copilot_Right_pedal3</object-name>
+    <object-name>Copilot_Right_pedal4</object-name>
+</animation>
+
+<animation>
+    <name>left_pedals</name>
+    <object-name>Pilot_Left_pedal</object-name>
+    <object-name>Pilot_Left_pedal1</object-name>
+    <object-name>Pilot_Left_pedal2</object-name>
+    <object-name>Pilot_Left_pedal3</object-name>
+    <object-name>Pilot_Left_pedal4</object-name>
+    <object-name>Copilot_Left_pedal</object-name>
+    <object-name>Copilot_Left_pedal1</object-name>
+    <object-name>Copilot_Left_pedal2</object-name>
+    <object-name>Copilot_Left_pedal3</object-name>
+    <object-name>Copilot_Left_pedal4</object-name>	
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>right_pedals</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>0.04</factor>
+    <axis>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Pilot_Right_pedal2</object-name>
+    <object-name>Pilot_Right_pedal3</object-name>
+    <object-name>Pilot_Right_pedal4</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.77371</x-m>
+			<y-m>-0.138559</y-m>
+			<z-m>-0.361607</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Pilot_Right_pedal1</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.74935</x-m>
+			<y-m>-0.200626</y-m>
+			<z-m>-0.276138</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Copilot_Right_pedal2</object-name>
+    <object-name>Copilot_Right_pedal3</object-name>
+    <object-name>Copilot_Right_pedal4</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.77371</x-m>
+			<y-m>0.472833</y-m>
+			<z-m>-0.361607</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Copilot_Right_pedal1</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.74935</x-m>
+			<y-m>0.410767</y-m>
+			<z-m>-0.276138</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>translate</type>
+    <object-name>left_pedals</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>-0.04</factor>
+    <axis>
+        <x>1.0</x>
+        <y>0.0</y>
+        <z>0.0</z>
+    </axis>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Pilot_Left_pedal2</object-name>
+    <object-name>Pilot_Left_pedal3</object-name>
+    <object-name>Pilot_Left_pedal4</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.77371</x-m>
+			<y-m>-0.473901</y-m>
+			<z-m>-0.361607</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Pilot_Left_pedal1</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.74935</x-m>
+			<y-m>-0.414698</y-m>
+			<z-m>-0.276138</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Copilot_Left_pedal2</object-name>
+    <object-name>Copilot_Left_pedal3</object-name>
+    <object-name>Copilot_Left_pedal4</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.77371</x-m>
+			<y-m>0.140798</y-m>
+			<z-m>-0.361607</z-m>
+		</center>
+</animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>Copilot_Left_pedal1</object-name>
+    <property>controls/flight/rudder</property>
+    <factor>12</factor>
+    <axis>
+        <x>0.0</x>
+        <y>1.0</y>
+        <z>0.0</z>
+    </axis>
+		<center>
+			<x-m>1.74935</x-m>
+			<y-m>0.200001</y-m>
+			<z-m>-0.276138</z-m>
+		</center>
+</animation>
+
+<!-- Doors -->
+
+	<animation>
+		<type>rotate</type>
+		<object-name>doors_latch</object-name>	
+		<property>sim/model/pa38/doors/latched</property>
+		<factor>180</factor>
+		<axis>
+			<x>0</x>
+			<y>0.1</y>
+			<z>1</z>
+		</axis>
+		<center>
+			<x-m>2.30869</x-m>
+			<y-m>-0.002776</y-m>
+			<z-m>0.682218</z-m>
+		</center>
+	</animation>
+	<animation>
+        <type>pick</type>
+        <object-name>doors_latch</object-name>
+		<visible>true</visible>
+		<action>
+			<button>0</button>
+			<binding>
+				<command>property-toggle</command>
+				<property>sim/model/pa38/doors/latched</property>
+			</binding>
+			<binding>
+				<command>nasal</command>
+				<script>pa38.click("rotator")</script>
+			</binding>
+		</action>
+		<hovered>
+			<binding>
+				<command>set-tooltip</command>
+				<tooltip-id>door-latch</tooltip-id>
+				<label>Door Latch: %s</label>
+				<mapping>nasal</mapping>
+				<script>
+					var modes = ['Unlatched', 'Latched'];
+					return modes[arg[0]];
+				</script>
+				<property>sim/model/pa38/doors/latched</property>
+			</binding>
+		</hovered>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+        <object-name>L_handle_in</object-name>
+        <object-name>L_handle_out</object-name>
+        <visible>true</visible>
+		<action>
+			<button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>pa38.leftDoor.toggle();</script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>door-handle-l</tooltip-id>
+                <label>Open/Close Left Door</label>
+            </binding>
+        </hovered>
+    </animation>
+
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Lwindow</object-name>
+        <object-name>L_door_in</object-name>
+		<object-name>L_door_in2</object-name>
+        <object-name>L_door_out</object-name>
+        <object-name>L_handle_out</object-name>
+        <object-name>L_handle_in</object-name>				
+        <property alias="/params/doors/left"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>85.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.05605</x1-m>
+			<y1-m>-0.60885</y1-m>
+			<z1-m>0.189133</z1-m>
+			<x2-m>2.05542</x2-m>
+			<y2-m>-0.619509</y2-m>
+			<z2-m>-0.085807</z2-m>
+		</axis>
+    </animation>
+
+ 	<animation>
+		<type>rotate</type>
+		<object-name>L_handle_in</object-name>
+		<property alias="/params/doors/left"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>110.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>110.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.4393</x1-m>
+			<y1-m>-0.595343</y1-m>
+			<z1-m>0.118704</z1-m>
+			<x2-m>2.4393</x2-m>
+			<y2-m>-0.588243</y2-m>
+			<z2-m>0.118704</z2-m>
+		</axis>
+	</animation>
+
+ 	<animation>
+		<type>rotate</type>
+		<object-name>L_handle_out</object-name>
+		<property alias="/params/doors/left"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>90.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>90.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.4383</x1-m>
+			<y1-m>-0.6536</y1-m>
+			<z1-m>0.118754</z1-m>
+			<x2-m>2.4383</x2-m>
+			<y2-m>-0.6171</y2-m>
+			<z2-m>0.118754</z2-m>
+		</axis>
+	</animation>
+
+	<animation>
+        <type>pick</type>
+        <object-name>R_handle_in</object-name>
+        <object-name>R_handle_out</object-name>
+        <visible>true</visible>
+        <action>
+            <button>0</button>
+            <repeatable>false</repeatable>
+            <binding>
+                <command>nasal</command>
+                <script>pa38.rightDoor.toggle();</script>
+            </binding>
+        </action>
+        <hovered>
+            <binding>
+                <command>set-tooltip</command>
+                <tooltip-id>door-handle-r</tooltip-id>
+                <label>Open/Close Right Door</label>
+            </binding>
+        </hovered>
+    </animation>
+
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>Rwindow</object-name>
+        <object-name>R_door_in</object-name>
+		<object-name>R_door_in2</object-name>
+        <object-name>R_door_out</object-name>
+        <object-name>R_handle_out</object-name>
+        <object-name>R_handle_in</object-name>				
+        <property alias="/params/doors/right"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-85.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.05605</x1-m>
+			<y1-m>0.609417</y1-m>
+			<z1-m>0.189133</z1-m>
+			<x2-m>2.05542</x2-m>
+			<y2-m>0.620077</y2-m>
+			<z2-m>-0.085807</z2-m>
+		</axis>
+    </animation>
+
+ 	<animation>
+		<type>rotate</type>
+		<object-name>R_handle_in</object-name>
+		<property alias="/params/doors/right"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>110.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>110.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.4393</x1-m>
+			<y1-m>0.589479</y1-m>
+			<z1-m>0.118704</z1-m>
+			<x2-m>2.4393</x2-m>
+			<y2-m>0.596579</y2-m>
+			<z2-m>0.118704</z2-m>
+		</axis>
+	</animation>
+
+ 	<animation>
+		<type>rotate</type>
+		<object-name>R_handle_out</object-name>
+		<property alias="/params/doors/right"/>
+        <interpolation>
+            <entry>
+                <ind>0.0</ind>
+                <dep>0.0</dep>
+            </entry>
+            <entry>
+                <ind>0.2</ind>
+                <dep>-90.0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>-90.0</dep>
+            </entry>
+        </interpolation>
+		<axis>
+			<x1-m>2.4383</x1-m>
+			<y1-m>0.652589</y1-m>
+			<z1-m>0.118754</z1-m>
+			<x2-m>2.4383</x2-m>
+			<y2-m>0.616089</y2-m>
+			<z2-m>0.118754</z2-m>
+		</axis>
+	</animation>
+
+<!-- Ground Equipment -->
+	
+	<!-- Left safety cone -->
+    <model>
+        <name>coneL</name>
+        <path>Exterior/safety-cone/safety-cone_L.xml</path>
+        <offsets>
+            <x-m>2.47249</x-m>
+            <y-m>-5.55523</y-m>
+            <z-m>-1.2089</z-m>
+        </offsets>
+    </model>
+
+	<!-- Right safety cone -->
+    <model>
+        <name>coneR</name>
+        <path>Exterior/safety-cone/safety-cone_R.xml</path>
+        <offsets>
+            <x-m>2.47249</x-m>
+            <y-m> 5.55523</y-m>
+            <z-m>-1.2089</z-m>
+        </offsets>
+    </model>
+
+	<!-- Nose wheel chocks -->
+    <model>
+        <name>NWchocks</name>
+        <path>Exterior/chocks/NWchocks.xml</path>
+        <offsets>
+            <x-m>0.997244</x-m>
+            <y-m> -0.009805</y-m>
+            <z-m>-1.21513</z-m>
+        </offsets>
+    </model>
+	
+
+	<!-- Left wheel chocks -->
+    <model>
+        <name>LWchocks</name>
+        <path>Exterior/chocks/LWchocks.xml</path>
+        <offsets>
+            <x-m>2.46016</x-m>
+            <y-m>-1.29861</y-m>
+            <z-m>-1.23694</z-m>
+        </offsets>
+    </model>
+	
+	<!-- Right wheel chocks -->
+    <model>
+        <name>RWchocks</name>
+        <path>Exterior/chocks/RWchocks.xml</path>
+        <offsets>
+            <x-m>2.46016</x-m>
+            <y-m>1.30438</y-m>
+            <z-m>-1.23694</z-m>
+        </offsets>
+    </model>
+    <!-- Towbar -->
+    <model>
+        <path>Exterior/towbar/towbar.xml</path>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+        </offsets>
+    </model>
+
+</PropertyList>
