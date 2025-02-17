@@ -54,7 +54,7 @@ refs 4
 3 0.022131 0.728692
 kids 0
 OBJECT poly
-name "Chassis.001"
+name "Chassis"
 data 8
 Mesh.000
 crease 45.0

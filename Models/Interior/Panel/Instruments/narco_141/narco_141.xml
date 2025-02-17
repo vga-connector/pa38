@@ -7,6 +7,20 @@
 <!--    Active Frequency   -->
 
     <animation>
+        <type>material</type>
+            <object-name>Digit_1000</object-name>
+            <object-name>Digit_100</object-name>
+            <object-name>Digit_10</object-name>
+            <object-name>Digit_1</object-name>
+        <emission>
+            <red>0.98</red>
+            <green>0.51</green>
+            <blue>0.0</blue>
+            <factor-prop>/sim/model/pa38/lighting/radio</factor-prop>
+        </emission>
+    </animation>
+
+    <animation>
         <type>textranslate</type>
         <object-name>Digit_1000</object-name>
         <property>instrumentation/adf/frequencies/selected-khz</property>

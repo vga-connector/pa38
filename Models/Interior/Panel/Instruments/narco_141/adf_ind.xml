@@ -42,6 +42,19 @@
  </animation> -->
 
 	<animation>
+		<type>material</type>
+		<object-name>CompassRose</object-name>
+		<object-name>ADFNeedle</object-name>
+		<object-name>Chassis</object-name>
+		<emission>
+			<red>1.00</red>
+			<green>0.65</green>
+			<blue>0.25</blue>
+			<factor-prop>/sim/model/pa38/lighting/instruments</factor-prop>
+		</emission>
+	</animation>
+
+	<animation>
 		<type>rotate</type>
 		<object-name>CompassRose</object-name>
 		<property alias="../../params/rotation-deg"/>
