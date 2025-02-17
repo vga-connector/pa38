@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <sim>
+        <model>
+            <livery>
+                <name type="string">G-BPES</name>
+                <index type="int">2</index>
+                <texture>Liveries\G-BPES\obj1.png</texture>
+                <texture2>Liveries\G-BPES\obj5.png</texture2>
+			</livery>
+        </model>
+    </sim>
+</PropertyList>

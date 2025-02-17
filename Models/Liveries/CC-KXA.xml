@@ -1,1 +1,14 @@
+<?xml version="1.0"?>
 
+<PropertyList>
+    <sim>
+        <model>
+            <livery>
+                <name type="string">CC-KXA</name>
+                <index type="int">4</index>
+                <texture>Liveries\CC-KXA\obj1.png</texture>
+                <texture2>Liveries\CC-KXA\obj5.png</texture2>
+			</livery>
+        </model>
+    </sim>
+</PropertyList>

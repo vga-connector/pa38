@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+    <sim>
+        <model>
+            <livery>
+                <name type="string">N6205A</name>
+                <index type="int">3</index>
+                <texture>Liveries\N6205A\obj1.png</texture>
+                <texture2>Liveries\N6205A\obj5.png</texture2>
+			</livery>
+        </model>
+    </sim>
+</PropertyList>
