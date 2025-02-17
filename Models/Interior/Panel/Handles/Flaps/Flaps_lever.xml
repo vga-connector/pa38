@@ -26,17 +26,21 @@
     </center>
 </animation>
     <animation>
-        <type>slider</type>
+        <type>knob</type>
         <object-name>Flap-Lever</object-name>
         <visible>true</visible>
         <drag-direction>vertical</drag-direction>
         <action>
             <binding>
-                <command>property-adjust</command>
+<!--                <command>property-adjust</command> -->
+                <command>property-cycle</command>
                 <property>controls/flight/flaps</property>
-                <factor>0.25</factor>
+<!--                <factor>0.25</factor>
                 <min>0</min>
-                <max>1</max>
+                <max>1</max> -->
+				<value>0.000</value>
+				<value>0.617</value>
+				<value>1.000</value>				
                 <wrap>0</wrap>
             </binding>
         </action>
