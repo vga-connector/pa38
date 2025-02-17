@@ -4,10 +4,37 @@
 
 <path>pa38.ac</path>
 
-<!-- Register transparent objects for Rembrandt effects -->
+    <nasal>
+        <load>
+
+            var rplayer = cmdarg();
+
+            # Passengers
+            var pax_state_path = rplayer.getNode("sim/multiplay/generic/int[16]").getPath();
+
+            var pilot = rplayer.initNode("pax/pilot/present", 0, "BOOL");
+			var co_pilot = rplayer.initNode("pax/co-pilot/present", 0, "BOOL");
+            
+            setlistener(pax_state_path, func (node) {
+                var state = node.getValue();
+                pilot.setBoolValue(bits.test(state, 0));
+                co_pilot.setBoolValue(bits.test(state, 1));
+            }, 1, 0);
+
+            var livery_update = aircraft.livery_update.new(
+            "Aircraft/pa38/Models/Liveries", 10,
+            func { print("pa38 livery update") });
+
+        </load>
+        <unload>
+			livery_update.stop();
+        </unload> 
+    </nasal> 
+
+<!-- Register transparent objects -->
 	<effect>
 <!-- 		<inherits-from>Aircraft/pa38/Models/Effects/pa38-glass</inherits-from> -->
-		<inherits-from>Aircraft/pa38/Models/Effects/exterior-glass-reflection</inherits-from>
+		<inherits-from>Aircraft/pa38/Models/Effects/exterior/exterior-glass-reflection</inherits-from>
 		<object-name>WindShield</object-name>
 		<object-name>RearWindows</object-name>
 		<object-name>Rwindow</object-name>
@@ -19,6 +46,38 @@
         <object-name>propellerF</object-name>
         <object-name>propellerR</object-name>
     </effect>
+
+	<effect>
+		<inherits-from>Aircraft/pa38/Models/Effects/exterior/bumpspec-fuselage</inherits-from>
+		<object-name>fuselaje</object-name>
+		<object-name>ElevatorR</object-name>
+		<object-name>Elevator2R</object-name>
+		<object-name>ElevatorL</object-name>
+		<object-name>Elevator2L</object-name>
+		<object-name>Rudder</object-name>
+		<object-name>R_door_out</object-name>
+		<object-name>L_door_out</object-name>
+		<object-name>Air_intake</object-name>
+		<object-name>cone</object-name>
+		<object-name>cone_slow</object-name>
+		<object-name>Left_Strut</object-name>
+		<object-name>Right_Strut</object-name>
+		<object-name>Lsupport</object-name>
+		<object-name>Rsupport</object-name>
+		<object-name>tail_hook</object-name>
+	</effect>
+
+	<effect>
+		<inherits-from>Aircraft/pa38/Models/Effects/exterior/bumpspec-wings</inherits-from>
+		<object-name>LWing</object-name>
+		<object-name>LFlap</object-name>
+		<object-name>LeftAileron</object-name>
+		<object-name>Lfuel_cap</object-name>
+		<object-name>RWing</object-name>
+		<object-name>RFlap</object-name>
+		<object-name>RightAileron</object-name>
+		<object-name>Rfuel_cap</object-name>
+	</effect>
 
     <animation>
         <type>noshadow</type>
@@ -41,6 +100,7 @@
 		<object-name>compass_glass</object-name>	
         <object-name>propellerF</object-name>
         <object-name>propellerR</object-name>
+		<object-name>Pilot_Right_pedal</object-name>
 	</animation>
 
     <params>
@@ -50,6 +110,51 @@
         </doors>
     </params>
 
+      <path>lightning-f1a.ac</path>
+
+      <model>
+          <path>Aircraft/Generic/marker.xml</path>
+      </model>
+
+    <!-- Liveries (W.I.P.)-->
+
+    <animation>
+        <type>material</type>
+		<object-name>fuselaje</object-name>
+		<object-name>ElevatorR</object-name>
+		<object-name>Elevator2R</object-name>
+		<object-name>ElevatorL</object-name>
+		<object-name>Elevator2L</object-name>
+		<object-name>Rudder</object-name>
+		<object-name>R_door_out</object-name>
+		<object-name>L_door_out</object-name>
+		<object-name>Air_intake</object-name>
+		<object-name>cone</object-name>
+		<object-name>cone_slow</object-name>
+		<object-name>Left_Strut</object-name>
+		<object-name>Right_Strut</object-name>
+		<object-name>Lsupport</object-name>
+		<object-name>Rsupport</object-name>
+		<object-name>tail_hook</object-name>
+        <property-base>sim/model/livery/</property-base>
+        <texture-prop>texture</texture-prop>
+        <texture>obj1.png</texture>
+    </animation>
+
+    <animation>
+        <type>material</type>
+		<object-name>LWing</object-name>
+		<object-name>LFlap</object-name>
+		<object-name>LeftAileron</object-name>
+		<object-name>Lfuel_cap</object-name>
+		<object-name>RWing</object-name>
+		<object-name>RFlap</object-name>
+		<object-name>RightAileron</object-name>
+		<object-name>Rfuel_cap</object-name>
+        <property-base>sim/model/livery/</property-base>
+        <texture-prop>texture2</texture-prop>
+        <texture>obj5.png</texture>
+    </animation>
 
  <!-- <effect>
     <inherits-from>Effects/model-transparent</inherits-from>
@@ -394,26 +499,6 @@
             <z-m>0.018337</z-m>
         </offsets>
     </model>
-   
-    <!-- Pedals -->
-<!--    <model>
-        <name>PilotPedals</name>
-        <path>Interior/Pedals/pedals.xml</path>
-        <offsets>
-            <x-m>1.508</x-m>
-            <y-m>-0.24</y-m>
-            <z-m>-0.29</z-m>
-        </offsets>
-    </model>
-   <model>
-        <name>CoPilotPedals</name>
-        <path>Interior/Pedals/pedals.xml</path>
-        <offsets>
-            <x-m>1.508</x-m>
-            <y-m>0.24</y-m>
-            <z-m>-0.29</z-m>
-        </offsets>
-    </model> -->
     
 <!-- Cockpit Switches -->
 
@@ -478,6 +563,16 @@
     </model>
 
     <model>
+        <name>Int_light_Switch</name>
+        <path>Interior/Panel/Switches/int_light-switch/int_light-switch.xml</path>
+        <offsets>
+            <x-m>2.23171</x-m>
+            <y-m>-0.001985</y-m>
+            <z-m>0.67707</z-m>
+        </offsets>
+    </model>
+
+    <model>
         <name>Carb_Heat</name>
         <path>Interior/Panel/Handles/CarbHeat/CarbHeat.xml</path>
         <offsets>
@@ -538,8 +633,6 @@
     </model>
 
 <!-- Circuit Breakers -->
-
-
 
     <model>
         <name>Starter_CB</name>
@@ -943,6 +1036,37 @@
         </condition>
     </animation>
 
+	<model>
+		<name>IntLight</name>
+		<path>Aircraft/pa38/Models/Effects/lights/spotlight.xml</path>
+		<offsets>
+			<x-m> 2.25</x-m>
+			<y-m> 0.0</y-m>
+			<z-m> 0.68</z-m>
+		</offsets>
+		<overlay>
+			<params>
+				<name>IntLight</name>
+				<power-source>/controls/lighting/int-lights</power-source>
+				<direction>
+					<x>0.3</x>
+					<y>0.0</y>
+					<z>0.8</z>
+				</direction>
+				<ambient>
+					<r>0.25</r>
+					<g>0.20</g>
+					<b>0.10</b>
+				</ambient>
+				<specular>
+					<r>0.001</r>
+					<g>0.001</g>
+					<b>0.001</b>
+				</specular>
+			</params>
+		</overlay>
+	</model>
+
 <!-- Propeller -->
 
 <animation>
@@ -956,7 +1080,7 @@
     <condition>
         <less-than>
             <property>engines/engine[0]/rpm</property>
-            <value>540</value>
+            <value>450</value>
         </less-than>
     </condition>
 </animation>
@@ -991,7 +1115,7 @@
     <condition>
         <greater-than>
             <property>engines/engine[0]/rpm</property>
-            <value>540</value>
+            <value>450</value>
         </greater-than>
     </condition>
 </animation>
@@ -1943,7 +2067,6 @@
         </offsets>
     </model>
 	
-
 	<!-- Left wheel chocks -->
     <model>
         <name>LWchocks</name>
@@ -1965,6 +2088,7 @@
             <z-m>-1.23694</z-m>
         </offsets>
     </model>
+
     <!-- Towbar -->
     <model>
         <path>Exterior/towbar/towbar.xml</path>
@@ -1974,5 +2098,89 @@
 			<z-m>0.0</z-m>
         </offsets>
     </model>
+
+    <!-- external power -->
+    <model>
+        <path>Exterior/external-power/external-power.xml</path>
+		<offsets>
+			<x-m>0.0</x-m>
+			<y-m>0.0</y-m>
+			<z-m>0.0</z-m>
+        </offsets>
+    </model>
+
+    <!-- Pilot, co-pilot, and passengers -->
+    <model>
+        <name>Pilot</name>
+        <path>Human/female-pilot.xml</path>
+        <offsets>
+            <x-m> 2.50 </x-m>
+            <y-m> -0.27 </y-m>
+            <z-m> -1.20 </z-m>
+        </offsets>
+    </model>
+    <model>
+        <name>Copilot</name>
+        <path>Human/male-copilot.xml</path>
+        <offsets>
+            <x-m> 2.50 </x-m>
+            <y-m> 0.251 </y-m>
+            <z-m> -1.20 </z-m>
+        </offsets>
+    </model>
+
+    <!-- Pilot visible only when not in the cockpit, the walker is not activated and if there is enough weight on his seat -->
+    <animation>
+        <type>select</type>
+        <object-name>Pilot</object-name>
+        <condition>
+            <and>
+                <!-- Note: the sim/ properties do NOT start with a /,
+                     which means that FlightGear tries to find them in
+                     either:
+
+                        (a) the root (/) for the local aircraft, or:
+                        (b) in /ai/models/multiplayer[i]
+
+                     In the case of (b), the properties do not exist, thus
+                     the <not-equals> gets evaluated to true (always), which
+                     is what we want, but this behavior is error-prone.
+                -->
+                <not-equals>
+                    <property>sim/current-view/name</property>
+                    <value>Cockpit View</value>
+                </not-equals>
+                <not-equals>
+                    <property>sim/current-view/name</property>
+                    <value>IFR Training View</value>
+                </not-equals>
+                <not>
+                    <property>sim/walker/outside</property>
+                </not>
+                <property>pax/pilot/present</property>
+                <property>sim/model/occupants</property>
+            </and>
+        </condition>
+    </animation>
+
+    <!-- Co-pilot not visible if not enough weight on his seat or if using Cockpit Right Seat View-->
+    <animation>
+        <type>select</type>
+        <object-name>Copilot</object-name>
+        <condition>
+            <and>
+                <not-equals>
+                    <property>sim/current-view/name</property>
+                    <value>Cockpit View</value>
+                </not-equals> 
+				<not-equals>
+                    <property>sim/current-view/name</property>
+                    <value>Cockpit Right Seat View</value>
+                </not-equals>
+                <property>pax/co-pilot/present</property>
+                <property>sim/model/occupants</property>
+            </and>
+        </condition>
+    </animation>
 
 </PropertyList>
