@@ -14,8 +14,9 @@
   <animation>
   <type>rotate</type>
   <object-name>light_knob</object-name>
-  <property>controls/lighting/instruments-norm</property>
-  <factor>210.00</factor>
+  <property>controls/lighting/panel-lights</property>
+  <factor>200.00</factor>
+  <offset-deg>50.00</offset-deg>
   <axis>
    <x>-1</x>
    <y>0</y>
@@ -31,9 +32,9 @@
     <repeatable>true</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>controls/lighting/instruments-norm</property>
+      <property>controls/lighting/panel-lights</property>
       <factor>0.1</factor>
-      <min>0</min>
+      <min>-0.1</min>
       <max>1.0</max>
       <wrap>0</wrap>
     </binding>

@@ -17,6 +17,7 @@
   <object-name>light_knob</object-name>
   <property>controls/lighting/radio-norm</property>
   <factor>210.00</factor>
+  <offset-deg>35.00</offset-deg>
   <axis>
    <x>-1</x>
    <y>0</y>
