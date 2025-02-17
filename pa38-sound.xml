@@ -55,7 +55,7 @@
   <engine>
     <name>engine</name>
     <mode>looped</mode>
-    <path>Sounds/wasp.wav</path>
+    <path>Sounds/Continental-O-320.wav</path>
     <property>/engines/engine/running</property>
     <volume>
       <property>/engines/engine/mp-osi</property>
@@ -65,15 +65,15 @@
            Also note that propeller noise is additional to engine
            noise, rather like an <offset>.
              -->
-      <max>1.0</max>
-      <min>0.10</min>
+      <max>1.8</max>
+      <min>0.9</min>
     </volume>
     <pitch>
       <property>/engines/engine/rpm</property>
-      <factor>0.0004</factor>
-      <min>0.0</min>
-      <max>2.0</max>
-      <offset>0.01</offset>
+      <factor>0.0008</factor>
+      <min>0.3</min>
+      <max>1.8</max>
+      <offset>0.15</offset>
     </pitch>
   </engine>
 
@@ -99,7 +99,7 @@
       <max>2.0</max>
       <offset>0.01</offset>
     </pitch>
-  </propeller>
+  </propeller> 
 
   <rumble>
    <name>rumble</name>
@@ -174,7 +174,7 @@
                 <z>0.5</z>
             </position>
             <volume>
-                <factor>0.8</factor>
+                <factor>1.0</factor>
             </volume>
             <reference-dist>10.0</reference-dist>
             <max-dist>20.0</max-dist>
@@ -478,6 +478,46 @@
                 <z>-0.3500</z>
             </position>
             <reference-dist>2.8</reference-dist>
+            <max-dist>5.0</max-dist>
+        </switch>
+
+        <switch>
+            <name>click-primer-out</name>
+            <mode>once</mode>
+            <path>Sounds/primer-out.wav</path>
+            <condition>
+                <property>/controls/engines/engine/primer-lever</property>
+            </condition>
+            <volume>
+                <factor>0.32</factor>
+            </volume>
+            <position>
+                <x>-0.3660</x>
+                <y>0.3700</y>
+                <z>-0.3500</z>
+            </position>
+            <reference-dist>3.5</reference-dist>
+            <max-dist>5.0</max-dist>
+        </switch>
+
+        <switch>
+            <name>click-primer-in</name>
+            <mode>once</mode>
+            <path>Sounds/primer-in.wav</path>
+            <condition>
+                <not>
+                    <property>/controls/engines/engine/primer-lever</property>
+                </not>
+            </condition>
+            <volume>
+                <factor>0.32</factor>
+            </volume>
+            <position>
+                <x>-0.3660</x>
+                <y>0.3700</y>
+                <z>-0.3500</z>
+            </position>
+            <reference-dist>3.5</reference-dist>
             <max-dist>5.0</max-dist>
         </switch>
 

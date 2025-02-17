@@ -279,6 +279,50 @@
  
  <flight_control name="FCS: Piper PA-38 Tomahawk">
 
+        <channel name="Mixture">
+            <!-- If the engine was primed enough times and throttle
+                 is in starter position, then mixture is 1.
+				 (Taked from J3Cub logic)
+            -->
+            <fcs_function name="fcs/mixture-primer-cmd">
+                <function>
+                    <table>
+                        <independentVar lookup="row">/controls/engines/engine/primer</independentVar>
+                        <independentVar lookup="column">/controls/engines/engine/throttle</independentVar>
+                        <tableData>
+                                 0.09    0.1    0.5    0.51
+                            2    0       0      0      0
+                            3    0       1      1      0
+                            4    0       1      1      0
+                            5    0       1      1      0
+                            6    0       1      1      0
+                            7    0       0      0      0
+                        </tableData>
+                    </table>
+                </function>
+            </fcs_function>
+
+            <pure_gain name="fcs/mixture-primer">
+                <input>fcs/mixture-cmd-norm</input>
+                <gain>fcs/mixture-primer-cmd</gain>
+            </pure_gain>
+
+            <!-- Primer logic -->
+            <switch name="Mixture Position">
+                <default value="fcs/mixture-cmd-norm"/>
+                <output>fcs/mixture-pos-norm</output>
+                <!-- Use primer if used and engine is cold. If engine
+                     is warm, then the mixture lever is used.
+                -->
+                <test logic="AND" value="fcs/mixture-primer">
+                    /controls/engines/engine/use-primer eq 1
+                    /engines/engine/oil-temperature-degf le 75
+                </test>
+            </switch>
+
+        </channel>
+
+
  <!-- following code by Jonathan Redpath aka legoboyvdlp-->
 <channel name="NWS">
             <switch name="fcs/nws-enabled">
@@ -497,8 +541,7 @@
 
   </channel>
 
-
- <channel name="Flaps">
+<channel name="Flaps">
    <kinematic name="Flaps Control">
      <input>fcs/flap-cmd-norm</input>
      <traverse>
@@ -508,11 +551,11 @@
        </setting>
        <setting>
           <position> 21 </position>
-          <time>      0.35 </time>
+          <time>    1.0 </time>
        </setting>
        <setting>
           <position> 34 </position>
-          <time>      0.35 </time>
+          <time>    1.0 </time>
        </setting>
      </traverse>
      <output>fcs/flap-pos-deg</output>
@@ -530,29 +573,22 @@
       </range>
       <output>fcs/flap-pos-norm</output>
    </aerosurface_scale>
+            <kinematic name="Flaps Lever">
+                <input>/controls/flight/flaps</input>
+                <traverse>
+                    <setting>
+                        <position>0</position>
+                        <time>0</time>
+                    </setting>
+                    <setting>
+                        <position>1</position>
+                        <time>1</time>
+                    </setting>
+                </traverse>
+                <output>/sim/model/pa38/cockpit/flaps-lever</output>
+            </kinematic>
 
   </channel> 
-
-  <channel name="Landing Gear">
-  </channel>
-
-  <channel name="Speedbrake">
-   <kinematic name="Speedbrake Control">
-     <input>fcs/speedbrake-cmd-norm</input>
-     <traverse>
-       <setting>
-          <position> 0 </position>
-          <time>     0 </time>
-       </setting>
-       <setting>
-          <position> 1 </position>
-          <time>     1 </time>
-       </setting>
-     </traverse>
-     <output>fcs/speedbrake-pos-norm</output>
-   </kinematic>
-
-  </channel>
 
  </flight_control>
 
