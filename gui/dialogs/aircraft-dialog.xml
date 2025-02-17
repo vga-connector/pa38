@@ -20,7 +20,6 @@
     <modal>false</modal>
     <draggable>true</draggable>
 
-
     <group>
         <layout>hbox</layout>
 
@@ -38,8 +37,9 @@
             <binding>
                 <command>dialog-close</command>
             </binding>
-	</button>
+		</button>
 	</group>
+
 	<hrule/>	
 
 	<group>
@@ -88,7 +88,7 @@
     
     <hrule/>
 	
-		<group>
+	<group>
 		<layout>hbox</layout>
 		<padding>6</padding>
 		<checkbox>
@@ -153,8 +153,11 @@
 	</group>	
     
     <hrule/>
-    
-		<checkbox>
+
+	<group>
+		<layout>vbox</layout>
+		<padding>6</padding> 
+			<checkbox>
                 <halign>left</halign>
                 <label>Attach Towbar</label>
                 <property>/fdm/jsbsim/external_reactions/towbar/attached</property>
@@ -185,7 +188,33 @@
                     </and>
                 </enable>
             </checkbox>
-
-        <hrule/>
+	</group>
+    
+	<hrule/>
+ 
+	<group>
+		<layout>vbox</layout>
+		<padding>6</padding>
+		<checkbox>
+			<halign>left</halign>
+			<label>Conect external power unit</label>
+			<property>/controls/electric/external-power</property>
+			<live>true</live>
+			<binding>
+				<command>property-toggle</command>
+				<property>/controls/electric/external-power</property>
+			</binding>
+			<binding>
+				<command>dialog-update</command>
+			</binding>
+            <enable>
+                <property>gear/gear[0]/wow</property>
+                <less-than>
+                    <property>velocities/groundspeed-kt</property>
+                    <value>1.0</value>
+                </less-than>
+            </enable>
+		</checkbox>
+	</group>
 
 </PropertyList>
