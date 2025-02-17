@@ -17,7 +17,7 @@
             <object-name>Knob_Digit_1</object-name>
             <object-name>knobmode</object-name>
             <object-name>reply</object-name>
-    </effect>
+    </effect> -->
 
     <animation>
         <type>material</type>
@@ -29,9 +29,9 @@
             <red>0.98</red>
             <green>0.51</green>
             <blue>0.0</blue>
-            <factor-prop>/sim/model/c152/lighting/radio</factor-prop>
+            <factor-prop>/sim/model/pa38/lighting/radio</factor-prop>
         </emission>
-    </animation> -->
+    </animation>
 
 <!--    Active Frequency   -->
 
