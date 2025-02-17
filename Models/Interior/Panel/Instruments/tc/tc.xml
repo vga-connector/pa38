@@ -12,27 +12,22 @@
   <object-name>Airplane</object-name>
   <object-name>Background</object-name>
   <object-name>Flag</object-name>
- </effect>
+ </effect> -->
 
- 
- <animation>
-  <type>material</type>
-  <object-name>Ball</object-name>
-  <object-name>Face</object-name>
-  <object-name>Airplane</object-name>
-  <object-name>Background</object-name>
-  <emission>
-   <red>1.0</red>
-   <green>0.2</green>
-   <blue>0.0</blue>
-   <factor-prop>/sim/model/material/instruments/factor</factor-prop>
-  </emission>
- </animation>  
-
-    <effect>
-        <inherits-from>Effects/model-transparent</inherits-from>
+	<animation>
+		<type>material</type>
+		<object-name>Ball</object-name>
+		<object-name>Face</object-name>
+		<object-name>Flaf</object-name>
 		<object-name>Airplane</object-name>
-	</effect> -->
+		<object-name>Background</object-name>
+		<emission>
+			<red>1.00</red>
+			<green>0.65</green>
+			<blue>0.25</blue>
+			<factor-prop>/sim/model/pa38/lighting/instruments</factor-prop>
+		</emission>
+	</animation>
 
  <animation>
   <type>rotate</type>
