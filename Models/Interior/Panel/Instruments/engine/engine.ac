@@ -158,7 +158,7 @@ refs 3
 34 0.005314 0.049347
 kids 0
 OBJECT poly
-name "case_lowe"
+name "case_lower"
 data 12
 OBJ3Mesh.002
 crease 40.0

@@ -4,18 +4,21 @@
 
  <path>engine.ac</path>
 
-<!-- <animation>
-  <type>material</type>
-  <object-name>Oil-base</object-name>
-  <object-name>OilPressNeedle</object-name>
-  <object-name>OilTempNeedle</object-name>
-  <emission>
-   <red>1.0</red>
-   <green>0.2</green>
-   <blue>0.0</blue>
-   <factor-prop>sim/model//material/instruments/factor</factor-prop>
-  </emission>
- </animation> -->
+	<animation>
+		<type>material</type>
+		<object-name>case_upper</object-name>
+		<object-name>case_lower</object-name>
+		<object-name>oil_temp_needle</object-name>
+		<object-name>oil_press_needle</object-name>
+		<object-name>alt_amps_needle</object-name>
+		<object-name>fuel_press_needle</object-name>
+		<emission>
+			<red>1.00</red>
+			<green>0.65</green>
+			<blue>0.25</blue>
+			<factor-prop>/sim/model/pa38/lighting/instruments</factor-prop>
+		</emission>
+	</animation>
 
 	<animation>
 		<type>rotate</type>
