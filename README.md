@@ -1,7 +1,7 @@
 PA-38-112 "Tomahawk"
 ====================
 
-A high detailed version of the Piper PA-38 aircraft for FlightGear.
+A high detailed version of the Piper PA-38 "Tomahawk" for FlightGear.
 
 Development thread: [https://forum.flightgear.org/viewtopic.php?f=4&t=40929](https://forum.flightgear.org/viewtopic.php?f=4&t=42778)
 
