@@ -349,9 +349,9 @@ var nyi = func (x) { gui.popupTip(x ~ ": not yet implemented", 3); }
 #}
 
 var power = func{
-    var old_value = getprop("/sim/model/c170b/lighting/gps-norm");
+    var old_value = getprop("/sim/model/pa38/lighting/gps-norm");
     var new_value = math.mod(old_value + 1, 3);
-    setprop("/sim/model/c170b/lighting/gps-norm", new_value);
+    setprop("/sim/model/pa38/lighting/gps-norm", new_value);
     if (new_value == 1) {
         setprop("/controls/lighting/gps-norm", 0);
         setprop("/instrumentation/garmin196/serviceable",1);
