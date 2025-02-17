@@ -105,4 +105,23 @@
         </output>
     </filter>
 
+    <filter>
+        <name>Controls Primer Lever</name>
+        <type>noise-spike</type>
+        <max-rate-of-change>1.1</max-rate-of-change>
+        <enable>
+            <condition>
+                <not>
+                    <property>/sim/freeze/replay-state</property>
+                </not>
+            </condition>
+        </enable>
+        <input>
+            <property>/controls/engines/engine/primer-lever</property>
+        </input>
+        <output>
+            <property>/sim/model/pa38/cockpit/primer-lever-animation</property>
+        </output>
+    </filter>
+
 </PropertyList>

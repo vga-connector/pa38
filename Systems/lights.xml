@@ -62,8 +62,8 @@
 						<value>10</value>
 					</greater-than>
 					<greater-than> 
-						<property>/controls/lighting/instruments-norm</property>
-						<value>0</value>
+						<property>/controls/lighting/panel-lights</property>
+						<value>-0.1</value>
 					</greater-than>
 				</and>
         </input>
@@ -71,6 +71,29 @@
             <property>controls/lighting/nav-lights</property>
         </output>
     </logic>
+
+    <filter>
+        <name>panel Lights</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <and>
+					<greater-than> 
+						<property>/systems/pa38/electrical/outputs/panel-lights</property>
+						<value>10</value>
+					</greater-than>
+					<greater-than> 
+						<property>/controls/lighting/panel-lights</property>
+						<value>-0.1</value>
+					</greater-than>
+				</and>
+            </condition>
+            <property>controls/lighting/panel-lights</property>
+        </input>
+        <output>
+            <property>controls/lighting/instruments-norm</property>
+        </output>
+    </filter>
 
     <filter>
         <name>Anti Collision</name>
@@ -95,14 +118,43 @@
         <input>
             <condition>
                 <greater-than> 
-                    <property>/systems/pa38/electrical/outputs/instrument-lights</property>
+                    <property>/systems/pa38/electrical/outputs/panel-lights</property>
                     <value>10</value>
                 </greater-than>
             </condition>
-            <property>controls/lighting/radio-switch</property>
+            <expression>
+                <table>
+                    <property>/controls/lighting/radio-norm</property>
+                    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+                    <entry><ind>1.0</ind><dep>.35</dep></entry>
+                </table>
+            </expression>
         </input>
         <output>
             <property>/sim/model/pa38/lighting/radio</property>
+        </output>
+    </filter>
+
+   <filter>
+        <name>Panel_lights</name>
+        <type>gain</type>
+        <input>
+            <condition>
+                <greater-than> 
+                    <property>/systems/pa38/electrical/outputs/panel-lights</property>
+                    <value>10</value>
+                </greater-than>
+            </condition>
+            <expression>
+                <table>
+                    <property>/controls/lighting/instruments-norm</property>
+                    <entry><ind>0.0</ind><dep>0.0</dep></entry>
+                    <entry><ind>1.0</ind><dep>.35</dep></entry>
+                </table>
+            </expression>
+        </input>
+        <output>
+            <property>sim/model/pa38/lighting/instruments</property>
         </output>
     </filter>
 
