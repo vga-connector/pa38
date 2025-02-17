@@ -18,6 +18,21 @@
 
  <path>narco_120.ac</path>
 
+
+    <animation>
+        <type>material</type>
+            <object-name>CommUse10M</object-name>
+			<object-name>CommUse1M</object-name>
+			<object-name>CommUse100K</object-name>
+			<object-name>CommUse10K</object-name>
+			<object-name>CommUse1K</object-name>
+        <emission>
+            <red>0.98</red>
+            <green>0.51</green>
+            <blue>0.0</blue>
+            <factor-prop>/sim/model/pa38/lighting/radio</factor-prop>
+        </emission>
+    </animation>
 	
 	<!-- Comm part -->
 
