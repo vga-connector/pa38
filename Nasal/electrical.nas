@@ -10,7 +10,7 @@ var electricsystem=func{
 	# external power source connected
     if (getprop("/controls/electric/external-power"))
     {
-        external_volts = 14;
+        external_volts = 12;
         external_amps = 60; 
  }
 	
@@ -50,7 +50,7 @@ var electricsystem=func{
 		bus_load += alternator_amps;
         power_source = "alternator";
     }
-    if ( master_bat and (external_volts > bus_volts ) ) {
+    if ( !master_bat and (external_volts > bus_volts ) ) {
         bus_volts = external_volts;
 		bus_load += external_amps;
         power_source = "external";

@@ -22,6 +22,7 @@ var autostart = func (msg=1) {
     setprop("/controls/flight/elevator-trim", 0.2);
     setprop("/controls/switches/master-bat", 1);
     setprop("/controls/switches/master-alt", 1);
+	setprop("/controls/engines/engine/primer", 3);
 
     # Setting lights
     setprop("/controls/lighting/nav-lights-switch", 1);
@@ -43,6 +44,14 @@ var autostart = func (msg=1) {
         setprop("/engines/engine/auto-start", 0);
     }, engine_running_check_delay);
 };
+
+var update_pax = func {
+    var state = 0;
+    state = bits.switch(state, 0, getprop("pax/pilot/present"));
+    state = bits.switch(state, 1, getprop("pax/co-pilot/present"));
+    setprop("/payload/pax-state", state);
+};
+
 
 #Transponder ident light
 var ident_status = maketimer(10.0, func {
@@ -169,11 +178,15 @@ setlistener("/instrumentation/comm[0]/frequencies/decimal2y3-mhz", func (node) {
 	setprop("/instrumentation/comm[0]/frequencies/selected-mhz", enteros + decimal1 + decimal2y3 );
 });
 
-    setlistener("/engines/engine/running", func (node) {
-        var autostart = getprop("/engines/engine/auto-start");
-        var cranking  = getprop("/engines/engine/cranking");
-        if (autostart and cranking and node.getBoolValue()) {
-            setprop("/controls/engines/engine/starter", 0);
-            setprop("/engines/engine/auto-start", 0);
-        }
-    }, 0, 0);
+setlistener("/pax/pilot/present", update_pax, 0, 0);
+setlistener("/pax/co-pilot/present", update_pax, 0, 0);
+update_pax();
+
+setlistener("/engines/engine/running", func (node) {
+	var autostart = getprop("/engines/engine/auto-start");
+	var cranking  = getprop("/engines/engine/cranking");
+	if (autostart and cranking and node.getBoolValue()) {
+		setprop("/controls/engines/engine/starter", 0);
+        setprop("/engines/engine/auto-start", 0);
+    }
+}, 0, 0);
