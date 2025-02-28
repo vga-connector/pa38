@@ -380,7 +380,7 @@
 
     <model>
         <name>Left_fuel_indicator</name>
-        <path>Interior/Panel/Instruments/Fuel/R-fuel-ind.xml</path>
+        <path>Interior/Panel/Instruments/fuel/R-fuel-ind.xml</path>
         <offsets>
             <x-m>1.86613</x-m>
             <y-m>0.04338</y-m>
@@ -391,7 +391,7 @@
 
     <model>
         <name>Right_fuel_indicator</name>
-        <path>Interior/Panel/Instruments/Fuel/L-fuel-ind.xml</path>
+        <path>Interior/Panel/Instruments/fuel/L-fuel-ind.xml</path>
         <offsets>
             <x-m>1.86613</x-m>
             <y-m>-0.046517</y-m>
