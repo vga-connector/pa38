@@ -9,27 +9,23 @@
     
     <path>Flaps_lever.ac</path>
 
-<animation>
-    <type>rotate</type>
-    <object-name>Flap-Lever</object-name>
-    <property>controls/flight/flaps</property>
-    <factor>60.0</factor>
-    <axis>
-        <x>0</x>
-        <y>1</y>
-        <z>0</z>
-    </axis>
-    <center>
-        <x-m>0</x-m>
-        <y-m>0</y-m>
-        <z-m>0</z-m>
-    </center>
-</animation>
     <animation>
         <type>knob</type>
         <object-name>Flap-Lever</object-name>
         <visible>true</visible>
         <drag-direction>vertical</drag-direction>
+        <property>controls/flight/flaps</property>
+        <factor>60.0</factor>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0</x-m>
+            <y-m>0</y-m>
+            <z-m>0</z-m>
+        </center>
         <action>
             <binding>
 <!--                <command>property-adjust</command> -->

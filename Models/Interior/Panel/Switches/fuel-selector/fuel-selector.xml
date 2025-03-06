@@ -4,33 +4,30 @@
 
  <path>fuel-selector.ac</path>
 
-	fuel tank selector		
-	<animation>
-		<type>rotate</type>
-		<object-name>fuel-selector</object-name>
-		<property>controls/fuel/fuel-selector</property>
-		<factor>-92</factor>
-		<axis>
-			<x>1.0</x>
-			<y>0.0</y>
-			<z>0.0</z>
-		</axis>
-		<center>
-			<x-m>0</x-m>
-			<y-m>0</y-m>
-			<z-m>0</z-m>
-		</center>
-	</animation>
-
+	<!-- fuel tank selector		-->
+	
    <animation>
         <type>knob</type>
         <object-name>fuel-selector</object-name>
         <visible>true</visible>
         <drag-scale-px>20</drag-scale-px>
+        <property>controls/fuel/fuel-selector</property>
+        <factor>-92</factor>
+		<axis>
+			<x>1.0</x>
+			<y>0.0</y>
+			<z>0.0</z>
+		</axis> 
+		<center>
+			<x-m>0</x-m>
+			<y-m>0</y-m>
+			<z-m>0</z-m>
+		</center>
         <action>
             <binding>
                 <command>property-cycle</command>
                 <property>controls/fuel/fuel-selector</property>
+                <factor>1</factor>
                 <wrap>0</wrap>
                 <value>0</value>
                 <!-- OFF -->
@@ -62,5 +59,3 @@
     </animation> 
 
 </PropertyList>
-
-
