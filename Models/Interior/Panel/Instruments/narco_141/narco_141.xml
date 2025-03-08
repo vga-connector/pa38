@@ -258,19 +258,32 @@
     <type>knob</type>
     <visible>true</visible>
     <object-name>Knob_ADF_mode</object-name>
+    <property>/instrumentation/adf[0]/actual-mode</property>
+    <factor> 45 </factor>
+    <offset-deg>0</offset-deg>
+    <axis>
+        <x>  -1 </x>
+        <y>  0 </y>
+        <z>  0 </z>
+    </axis>
+    <center>
+        <x-m> 0.0139</x-m>
+        <y-m> 0.0757</y-m>
+        <z-m>-0.0191</z-m>
+    </center> 
     <action>
-	<binding>
-	    <command>property-adjust</command>
-	    <property>/instrumentation/adf[0]/actual-mode</property>
-      <factor>1</factor>
-      <min>0</min>
-      <max>2</max>
-      <wrap>0</wrap>
-	</binding>
-			<binding>
-				<command>nasal</command>
-				<script>pa38.click("rotator")</script>
-			</binding>
+        <binding>
+            <command>property-adjust</command>
+            <property>/instrumentation/adf[0]/actual-mode</property>
+            <factor>1</factor>
+            <min>0</min>
+            <max>2</max>
+            <wrap>0</wrap>
+        </binding>
+		<binding>
+            <command>nasal</command>
+            <script>pa38.click("rotator")</script>
+        </binding>
     </action>
    <hovered>
     <binding>
@@ -287,24 +300,4 @@
    </hovered>
   </animation>
 
-  <animation>
-    <type>rotate</type>
-    <object-name>Knob_ADF_mode</object-name>
-    <property>/instrumentation/adf[0]/actual-mode</property>
-    <factor> 45 </factor>
-    <offset-deg>0</offset-deg>
-    <axis>
-      <x>  -1 </x>
-      <y>  0 </y>
-      <z>  0 </z>
-    </axis>
-        <center>
-            <x-m> 0.0139</x-m>
-            <y-m> 0.0757</y-m>
-            <z-m>-0.0191</z-m>
-        </center> 
- </animation>
-
 </PropertyList>
-
-

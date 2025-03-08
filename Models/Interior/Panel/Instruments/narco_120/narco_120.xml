@@ -271,8 +271,9 @@
 	</animation>
 
 	<animation>
-		<type>rotate</type>
+		<type>knob</type>
 		<object-name>Comm_Mode</object-name>
+		<visible>true</visible>
 		<property alias="/params/power-comm"/>
 		<factor>-50</factor>
 		<axis>
@@ -285,11 +286,6 @@
 			<y-m>0.0757</y-m>
 			<z-m>-0.0191</z-m>
 		</center>
-	</animation>
-	<animation>
-		<type>knob</type>
-		<visible>true</visible>
-		<object-name>Comm_Mode</object-name>
 		<action>
 			<binding>
 				<command>property-adjust</command>
@@ -316,5 +312,3 @@
 	</animation>
 
 </PropertyList>
-
-

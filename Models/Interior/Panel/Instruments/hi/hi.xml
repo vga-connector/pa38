@@ -52,6 +52,18 @@
     <animation>
         <type>knob</type>
         <object-name>OBS-Knob</object-name>
+        <property>instrumentation/heading-indicator/offset-deg</property>
+        <factor>6</factor>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.000146</x-m>
+            <y-m>-0.03584</y-m>
+            <z-m>-0.041128</z-m>
+        </center>
         <action>
             <binding>
                 <command>property-adjust</command>
@@ -78,24 +90,5 @@
             </binding>
         </hovered>
     </animation>
-   
-    <animation>
-        <type>rotate</type>
-        <object-name>OBS-Knob</object-name>
-        <property>instrumentation/heading-indicator/offset-deg</property>
-        <factor>6</factor>
-        <axis>
-            <x>-1</x>
-            <y>0</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-0.000146</x-m>
-            <y-m>-0.03584</y-m>
-            <z-m>-0.041128</z-m>
-        </center>
-    </animation>
 
 </PropertyList>
-
-

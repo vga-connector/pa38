@@ -12,8 +12,8 @@
  -->
 <!--     Panel/radio light control    -->
 
-  <animation>
-  <type>rotate</type>
+ <animation>
+  <type>knob</type>
   <object-name>light_knob</object-name>
   <property>controls/lighting/radio-norm</property>
   <factor>210.00</factor>
@@ -23,12 +23,6 @@
    <y>0</y>
    <z>0</z>
   </axis>
- </animation>
-
- <animation>
-  <type>knob</type>
-  <object-name>light_knob</object-name>
-  
   <visible>true</visible>
   <action>
     <repeatable>true</repeatable>

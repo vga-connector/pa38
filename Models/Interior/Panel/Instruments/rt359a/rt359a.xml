@@ -330,6 +330,38 @@
     <animation>
         <type>knob</type>
         <object-name>knobmode</object-name>
+
+        <property>instrumentation/transponder/inputs/knob-mode</property>
+        <factor>1</factor>
+        <interpolation>
+            <entry>
+                <ind>0</ind>
+                <dep>0</dep>
+            </entry>
+            <entry>
+                <ind>1</ind>
+                <dep>50</dep>
+            </entry>
+            <entry>
+                <ind>4</ind>
+                <dep>80</dep>
+            </entry>
+            <entry>
+                <ind>5</ind>
+                <dep>130</dep>
+            </entry>
+        </interpolation>
+        <center>
+            <x-m>  0.00630 </x-m>
+            <y-m> -0.06912 </y-m>
+            <z-m> -0.00641 </z-m>
+        </center>
+        <axis>
+            <x> -1 </x>
+            <y>  0 </y>
+            <z>  0 </z>
+        </axis>
+
         <visible>true</visible>
         <drag-scale-px>20</drag-scale-px>
         <action>
@@ -367,41 +399,6 @@
                 </script>
             </binding>
         </hovered>
-    </animation>
-
-    <animation>
-        <type>rotate</type>
-        <object-name>knobmode</object-name>
-        <property>instrumentation/transponder/inputs/knob-mode</property>
-        <factor>1</factor>
-        <interpolation>
-            <entry>
-                <ind>0</ind>
-                <dep>0</dep>
-            </entry>
-            <entry>
-                <ind>1</ind>
-                <dep>50</dep>
-            </entry>
-            <entry>
-                <ind>4</ind>
-                <dep>80</dep>
-            </entry>
-            <entry>
-                <ind>5</ind>
-                <dep>130</dep>
-            </entry>
-        </interpolation>
-        <center>
-            <x-m>  0.00630 </x-m>
-            <y-m> -0.06912 </y-m>
-            <z-m> -0.00641 </z-m>
-        </center>
-        <axis>
-            <x> -1 </x>
-            <y>  0 </y>
-            <z>  0 </z>
-        </axis>
     </animation>
 
     <animation>
