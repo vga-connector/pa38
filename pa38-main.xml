@@ -4,6 +4,7 @@
 JSBSim Piper PA-38 Tomahawk with 3D cockpit.
 
 Started October 04 2015 by Adrian Fernández Gómez alcala_sim@yahoo.com.ar
+Engine efficiency tweaks April 19 2025 by vgaconnector
 ************************************************************************
 -->
 
@@ -20,7 +21,7 @@ Started October 04 2015 by Adrian Fernández Gómez alcala_sim@yahoo.com.ar
             <tag>fixed-gear</tag>
         </tags>
   
-        <author>awall86 (Adrian Fernandez Gomez). A special thanks to Octal450 (Josh Davidson) for his excelent Aircraft Config Center Utility</author>
+        <author>awall86 (Adrian Fernandez Gomez), vgaconnector. A special thanks to Octal450 (Josh Davidson) for his excellent Aircraft Config Center Utility</author>
         <status>alpha</status>
         <aircraft-version>2025.2.1A</aircraft-version>
         <minimum-fg-version>2020.3.17</minimum-fg-version> 
